@@ -24,14 +24,6 @@ public class PlayerController : MonoBehaviour
     // 공격 간격
     public float attackInterval;
 
-    // 피격시
-    //public Color invulnerableColor;
-    //public Vector2 hurtRecoil;
-    //public float hurtTime;
-    //public float hurtRecoverTime;
-    //public Vector2 deathRecoil;
-    //public float deathDelay;
-
     // 공격(위, 정면, 아래)
     public Vector2 attackUpRecoil;
     public Vector2 attackForwardRecoil;
@@ -96,7 +88,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // enter climb state
+        // 벽점프 돌입!
+        // 만약 태그가 Wall이고 땅에 닿지 않았다면,
         if (collision.collider.tag == "Wall" && !isGround)
         {
             rigidbody.gravityScale = 0;
@@ -116,55 +109,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        // 만약 태그가 벽이고, 떨어지고 있으며, 벽에 닿지 않았다면
         if (collision.collider.tag == "Wall" && isFalling && !isClimb)
         {
             OnCollisionEnter2D(collision);
         }
     }
 
-    //public void hurt(int damage)
-    //{
-    //    gameObject.layer = LayerMask.NameToLayer("PlayerInvulnerable");
-
-    //    health = Mathf.Max(health - damage, 0);
-
-    //    if (health == 0)
-    //    {
-    //        die();
-    //        return;
-    //    }
-
-    //    // enter invulnerable state
-    //    animator.SetTrigger("IsHurt");
-
-    //    // stop player movement
-    //    Vector2 newVelocity;
-    //    newVelocity.x = 0;
-    //    newVelocity.y = 0;
-    //    rigidbody.velocity = newVelocity;
-
-    //    // visual effect
-    //    spriteRenderer.color = invulnerableColor;
-
-    //    // death recoil
-    //    Vector2 newForce;
-    //    newForce.x = -transform.localScale.x * hurtRecoil.x;
-    //    newForce.y = hurtRecoil.y;
-    //    rigidbody.AddForce(newForce, ForceMode2D.Impulse);
-
-    //    isInputEnabled = false;
-
-    //    StartCoroutine(recoverFromHurtCoroutine());
-    //}
-
-    //private IEnumerator recoverFromHurtCoroutine()
-    //{
-    //    yield return new WaitForSeconds(hurtTime);
-    //    isInputEnabled = true;
-    //    yield return new WaitForSeconds(hurtRecoverTime);
-    //    spriteRenderer.color = Color.white;
-    //    gameObject.layer = LayerMask.NameToLayer("Player");
-    //}
 
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -180,6 +131,7 @@ public class PlayerController : MonoBehaviour
 
     /* ######################################################### */
 
+    // 플레이어 상태 메서드
     private void updatePlayerState()
     {
         isGround = checkGrounded();
@@ -206,27 +158,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // 플레이어 움직임 메서드
     private void move()
     {
-        // calculate movement
-        float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed;
+        // 양쪽 움직임은 속도에 비례하게
+        float horizonMove = Input.GetAxis("Horizontal") * moveSpeed;
 
         // set velocity
         Vector2 newVelocity;
-        newVelocity.x = horizontalMovement;
+        newVelocity.x = horizonMove;
         newVelocity.y = rigidbody.velocity.y;
         rigidbody.velocity = newVelocity;
 
         if (!isClimb)
         {
             // the sprite itself is inversed 
-            float moveDirection = -transform.localScale.x * horizontalMovement;
+            float moveDirection = -transform.localScale.x * horizonMove;
 
             if (moveDirection < 0)
             {
                 // flip player sprite
                 Vector3 newScale;
-                newScale.x = horizontalMovement < 0 ? 1 : -1;
+                newScale.x = horizonMove < 0 ? 1 : -1;
                 newScale.y = 1;
                 newScale.z = 1;
 
@@ -300,47 +253,6 @@ public class PlayerController : MonoBehaviour
             attack();
     }
 
-    // 죽음.
-    //private void die()
-    //{
-    //    animator.SetTrigger("IsDead");
-
-    //    isInputEnabled = false;
-
-    //    // stop player movement
-    //    Vector2 newVelocity;
-    //    newVelocity.x = 0;
-    //    newVelocity.y = 0;
-    //    rigidbody.velocity = newVelocity;
-
-    //    // visual effect
-    //    spriteRenderer.color = invulnerableColor;
-
-    //    // death recoil
-    //    Vector2 newForce;
-    //    newForce.x = -transform.localScale.x * deathRecoil.x;
-    //    newForce.y = deathRecoil.y;
-    //    rigidbody.AddForce(newForce, ForceMode2D.Impulse);
-
-    //    StartCoroutine(deathCoroutine());
-    //}
-
-    //private IEnumerator deathCoroutine()
-    //{
-    //    var material = boxCollider.sharedMaterial;
-    //    material.bounciness = 0.3f;
-    //    material.friction = 0.3f;
-    //    // unity bug, need to disable and then enable to make it work
-    //    boxCollider.enabled = false;
-    //    boxCollider.enabled = true;
-
-    //    yield return new WaitForSeconds(deathDelay);
-
-    //    material.bounciness = 0;
-    //    material.friction = 0;
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    //}
-
     /* ######################################################### */
 
     // 바닥 체크
@@ -350,16 +262,19 @@ public class PlayerController : MonoBehaviour
 
         float radius = 0.2f;
 
-        // detect downwards
+        // 아래쪽 감지
         Vector2 direction;
         direction.x = 0;
         direction.y = -1;
 
         float distance = 0.5f;
+        
+        // 레이어 = Platform
         LayerMask layerMask = LayerMask.GetMask("Platform");
-
-        RaycastHit2D hitRec = Physics2D.CircleCast(origin, radius, direction, distance, layerMask);
-        return hitRec.collider != null;
+        // 레이어가 Platform인 친구의 충돌 정보를 저장(원점, 반경, 방향, 거리, 레이어).
+        RaycastHit2D hitPlatform = Physics2D.CircleCast(origin, radius, direction, distance, layerMask);
+        // 
+        return hitPlatform.collider != null;
     }
 
     // 점프 메서드
@@ -521,6 +436,7 @@ public class PlayerController : MonoBehaviour
         //StartCoroutine(attackCoroutine(attackDownEffect, attackEffectLifeTime, attackInterval, detectDirection, attackDownRecoil));
     }
 
+    // 공격 코루틴.. 적이 좀 필요할듯.
     //private IEnumerator attackCoroutine(GameObject attackEffect, float effectDelay, float attackInterval, Vector2 detectDirection, Vector2 attackRecoil)
     //{
     //    Vector2 origin = transform.position;
