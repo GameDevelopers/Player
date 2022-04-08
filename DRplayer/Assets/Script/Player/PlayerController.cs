@@ -267,7 +267,7 @@ public class PlayerController : MonoBehaviour
         direction.x = 0;
         direction.y = -1;
 
-        float distance = 0.5f;
+        float distance = 1f;
         
         // 레이어 = Platform
         LayerMask layerMask = LayerMask.GetMask("Platform");
@@ -288,6 +288,7 @@ public class PlayerController : MonoBehaviour
 
         //animator.SetBool("IsJump", true);
         jumpLeft -= 1;
+        Debug.Log("점프");
         //if (jumpLeft == 0)
         //{
         //    animator.SetTrigger("IsJumpSecond");
