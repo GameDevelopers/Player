@@ -1,5 +1,8 @@
 # Player
  DarkRogue 플레이어
+ 
+ ![image](https://user-images.githubusercontent.com/86696817/162695043-e53398f9-e1fd-43ee-8c86-bfae3df7add6.png)
+
 
 ## 계획 
 
