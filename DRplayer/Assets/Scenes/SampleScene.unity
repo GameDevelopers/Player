@@ -163,10 +163,7 @@ MonoBehaviour:
   sprintSpeed: 20
   sprintTime: 0.2
   sprintInterval: 0.4
-  attackInterval: 0.3
-  attackUpRecoil: {x: 0, y: -2}
-  attackForwardRecoil: {x: 0, y: 0}
-  attackDownRecoil: {x: 0, y: 4}
+  isGround: 0
 --- !u!58 &112041257
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -283,6 +280,8 @@ GameObject:
   - component: {fileID: 170303883}
   - component: {fileID: 170303888}
   - component: {fileID: 170303887}
+  - component: {fileID: 170303890}
+  - component: {fileID: 170303889}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -310,10 +309,7 @@ MonoBehaviour:
   sprintSpeed: 20
   sprintTime: 0.2
   sprintInterval: 0.4
-  attackInterval: 0.3
-  attackUpRecoil: {x: 0, y: -2}
-  attackForwardRecoil: {x: 0, y: 0}
-  attackDownRecoil: {x: 0, y: 4}
+  isGround: 0
 --- !u!212 &170303884
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -354,12 +350,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2178329917016127315, guid: d033e1ed3c9296b4489a11fca693570a, type: 3}
+  m_Sprite: {fileID: 6998040180752483474, guid: d6f3b37fdd01d8e4e86ea7db5b07a2a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.9301698, y: 1.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -374,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 170303882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -417,14 +413,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.11, y: 1.61}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.9301698, y: 1.53}
+    newSize: {x: 0.9301698, y: 1.53}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.11, y: 1.61}
+  m_Size: {x: 0.9301698, y: 1.53}
   m_EdgeRadius: 0
 --- !u!95 &170303888
 Animator:
@@ -445,6 +441,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &170303889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170303882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c39b4bf7edb70f4cb692468af04a441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 20
+--- !u!114 &170303890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170303882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f60c1dcb5a15be49ade995a29a017e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultForce: 300
+  upwardsForce: 600
+  movementTime: 0.1
 --- !u!1 &459269912
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +656,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -677,10 +701,7 @@ MonoBehaviour:
   sprintSpeed: 20
   sprintTime: 0.2
   sprintInterval: 0.4
-  attackInterval: 0.3
-  attackUpRecoil: {x: 0, y: -2}
-  attackForwardRecoil: {x: 0, y: 0}
-  attackDownRecoil: {x: 0, y: 4}
+  isGround: 0
 --- !u!50 &525272989
 Rigidbody2D:
   serializedVersion: 4
@@ -802,6 +823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 573073905}
+  - component: {fileID: 573073906}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -825,6 +847,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &573073906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573073904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a327e24bbddd8f41b551e407185bf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageable: 1
+  healthAmount: 100
+  invulnerabilityTime: 0.2
+  giveUpwardForce: 1
 --- !u!1 &607678323
 GameObject:
   m_ObjectHideFlags: 0

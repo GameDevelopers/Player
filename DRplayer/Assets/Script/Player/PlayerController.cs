@@ -22,12 +22,12 @@ public class PlayerController : MonoBehaviour
     public float sprintTime;
     public float sprintInterval;
     // 공격 간격
-    public float attackInterval;
+    //public float attackInterval;
 
     // 공격(위, 정면, 아래)
-    public Vector2 attackUpRecoil;
-    public Vector2 attackForwardRecoil;
-    public Vector2 attackDownRecoil;
+    //public Vector2 attackUpRecoil;
+    //public Vector2 attackForwardRecoil;
+    //public Vector2 attackDownRecoil;
 
     // 공격이펙트(위, 정면, 아래)
     //public GameObject attackUpEffect;
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     //public GameObject attackDownEffect;
 
     // 땅에 닿았는가
-    private bool isGround;
+    public bool isGround;
     // 벽에 닿았는가
     private bool isClimb;
     // 스프린트 가능한가
@@ -47,12 +47,12 @@ public class PlayerController : MonoBehaviour
     // 떨어지고 있는가
     private bool isFalling;
     // 공격가능?
-    private bool isAttackable;
+    //private bool isAttackable;
 
     // 벽점프 딜레이
     private float climbJumpDelay = 0.2f;
     // 공격이펙트 생성시간
-    private float attackEffectLifeTime = 0.05f;
+    //private float attackEffectLifeTime = 0.05f;
 
     //private Animator animator;
     private Rigidbody2D rigidbody;
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     {
         isInputEnabled = true;
         isSprintReset = true;
-        isAttackable = true;
+        //isAttackable = true;
 
         //animator = gameObject.GetComponent<Animator>();
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
             jumpControl();
             fallControl();
             sprintControl();
-            attackControl();
+            //attackControl();
         }
     }
 
@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
     /* ######################################################### */
 
     // 플레이어 상태 메서드
-    private void updatePlayerState()
+    public void updatePlayerState()
     {
         isGround = checkGrounded();
         //animator.SetBool("IsGround", isGround);
@@ -247,11 +247,11 @@ public class PlayerController : MonoBehaviour
     }
 
     // 공격(z)
-    private void attackControl()
-    {
-        if (Input.GetKeyDown(KeyCode.Z) && !isClimb && isAttackable)
-            attack();
-    }
+    //private void attackControl()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Z) && !isClimb && isAttackable)
+    //        attack();
+    //}
 
     /* ######################################################### */
 
@@ -383,59 +383,59 @@ public class PlayerController : MonoBehaviour
     }
 
     // 공격 메서드
-    private void attack()
-    {
-        float verticalDirection = Input.GetAxis("Vertical");
-        if (verticalDirection > 0)
-            attackUp();
-        else if (verticalDirection < 0 && !isGround)
-            attackDown();
-        else
-            attackForward();
-    }
+    //private void attack()
+    //{
+    //    float verticalDirection = Input.GetAxis("Vertical");
+    //    if (verticalDirection > 0)
+    //        attackUp();
+    //    else if (verticalDirection < 0 && !isGround)
+    //        attackDown();
+    //    else
+    //        attackForward();
+    //}
 
     // 공격(위) 메서드
-    private void attackUp()
-    {
-        //animator.SetTrigger("IsAttackUp");
-        //attackUpEffect.SetActive(true);
+    //private void attackUp()
+    //{
+    //    //animator.SetTrigger("IsAttackUp");
+    //    //attackUpEffect.SetActive(true);
 
-        Vector2 detectDirection;
-        detectDirection.x = 0;
-        detectDirection.y = 1;
+    //    Vector2 detectDirection;
+    //    detectDirection.x = 0;
+    //    detectDirection.y = 1;
 
-        //StartCoroutine(attackCoroutine(attackUpEffect, attackEffectLifeTime, attackInterval, detectDirection, attackUpRecoil));
-    }
+    //    //StartCoroutine(attackCoroutine(attackUpEffect, attackEffectLifeTime, attackInterval, detectDirection, attackUpRecoil));
+    //}
 
     // 공격(정면) 메서드
-    private void attackForward()
-    {
-        //animator.SetTrigger("IsAttack");
-        //attackForwardEffect.SetActive(true);
+    //private void attackForward()
+    //{
+    //    //animator.SetTrigger("IsAttack");
+    //    //attackForwardEffect.SetActive(true);
 
-        Vector2 detectDirection;
-        detectDirection.x = -transform.localScale.x;
-        detectDirection.y = 0;
+    //    Vector2 detectDirection;
+    //    detectDirection.x = -transform.localScale.x;
+    //    detectDirection.y = 0;
 
-        Vector2 recoil;
-        recoil.x = transform.localScale.x > 0 ? -attackForwardRecoil.x : attackForwardRecoil.x;
-        recoil.y = attackForwardRecoil.y;
+    //    Vector2 recoil;
+    //    recoil.x = transform.localScale.x > 0 ? -attackForwardRecoil.x : attackForwardRecoil.x;
+    //    recoil.y = attackForwardRecoil.y;
 
         //StartCoroutine(attackCoroutine(attackForwardEffect, attackEffectLifeTime, attackInterval, detectDirection, recoil));
-    }
+    //}
 
     // 공격() 메서드
-    private void attackDown()
-    {
-        //animator.SetTrigger("IsAttackDown");
-        //attackDownEffect.SetActive(true);
+    //private void attackDown()
+    //{
+    //    //animator.SetTrigger("IsAttackDown");
+    //    //attackDownEffect.SetActive(true);
 
-        Vector2 detectDirection;
-        detectDirection.x = 0;
-        detectDirection.y = -1;
+    //    Vector2 detectDirection;
+    //    detectDirection.x = 0;
+    //    detectDirection.y = -1;
 
-        //StartCoroutine(attackCoroutine(attackDownEffect, attackEffectLifeTime, attackInterval, detectDirection, attackDownRecoil));
-    }
+    //    //StartCoroutine(attackCoroutine(attackDownEffect, attackEffectLifeTime, attackInterval, detectDirection, attackDownRecoil));
+    //}
 
     // 공격 코루틴.. 적이 좀 필요할듯.
     //private IEnumerator attackCoroutine(GameObject attackEffect, float effectDelay, float attackInterval, Vector2 detectDirection, Vector2 attackRecoil)
