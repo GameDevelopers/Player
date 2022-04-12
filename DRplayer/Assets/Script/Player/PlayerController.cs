@@ -55,8 +55,8 @@ public class PlayerController : MonoBehaviour
     //private float attackEffectLifeTime = 0.05f;
 
     //private Animator animator;
-    private Rigidbody2D rigidbody;
-    private Transform transform;
+    private Rigidbody2D playerRigidbody;
+    private Transform playerTransform;
     //private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
 
@@ -67,8 +67,8 @@ public class PlayerController : MonoBehaviour
         //isAttackable = true;
 
         //animator = gameObject.GetComponent<Animator>();
-        rigidbody = gameObject.GetComponent<Rigidbody2D>();
-        transform = gameObject.GetComponent<Transform>();
+        playerRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        playerTransform = gameObject.GetComponent<Transform>();
         //spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
     }
@@ -92,13 +92,13 @@ public class PlayerController : MonoBehaviour
         // 만약 태그가 Wall이고 땅에 닿지 않았다면,
         if (collision.collider.tag == "Wall" && !isGround)
         {
-            rigidbody.gravityScale = 0;
+            playerRigidbody.gravityScale = 0;
 
             Vector2 newVelocity;
             newVelocity.x = 0;
             newVelocity.y = -2;
 
-            rigidbody.velocity = newVelocity;
+            playerRigidbody.velocity = newVelocity;
 
             isClimb = true;
             //animator.SetBool("IsClimb", true);
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
             isClimb = false;
             //animator.SetBool("IsClimb", false);
 
-            rigidbody.gravityScale = 1;
+            playerRigidbody.gravityScale = 1;
         }
     }
 
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
         isGround = checkGrounded();
         //animator.SetBool("IsGround", isGround);
 
-        float verticalVelocity = rigidbody.velocity.y;
+        float verticalVelocity = playerRigidbody.velocity.y;
         //animator.SetBool("IsDown", verticalVelocity < 0);
 
         if (isGround && verticalVelocity == 0)
@@ -167,8 +167,8 @@ public class PlayerController : MonoBehaviour
         // set velocity
         Vector2 newVelocity;
         newVelocity.x = horizonMove;
-        newVelocity.y = rigidbody.velocity.y;
-        rigidbody.velocity = newVelocity;
+        newVelocity.y = playerRigidbody.velocity.y;
+        playerRigidbody.velocity = newVelocity;
 
         if (!isClimb)
         {
@@ -214,7 +214,7 @@ public class PlayerController : MonoBehaviour
     // 점프 (space)
     private void jumpControl()
     {
-        if (!Input.GetButtonDown("Jump"))
+        if (!Input.GetKeyDown(KeyCode.C)) //(!Input.GetButtonDown("Jump"))
             return;
 
         if (isClimb)
@@ -228,7 +228,7 @@ public class PlayerController : MonoBehaviour
     // 떨어짐 구현
     private void fallControl()
     {
-        if (Input.GetButtonUp("Jump") && !isClimb)
+        if (Input.GetKeyUp(KeyCode.C) && !isClimb) //(Input.GetButtonUp("Jump") && !isClimb)
         {
             isFalling = true;
             fall();
@@ -281,10 +281,10 @@ public class PlayerController : MonoBehaviour
     private void jump()
     {
         Vector2 newVelocity;
-        newVelocity.x = rigidbody.velocity.x;
+        newVelocity.x = playerRigidbody.velocity.x;
         newVelocity.y = jumpSpeed;
 
-        rigidbody.velocity = newVelocity;
+        playerRigidbody.velocity = newVelocity;
 
         //animator.SetBool("IsJump", true);
         jumpLeft -= 1;
@@ -305,7 +305,7 @@ public class PlayerController : MonoBehaviour
         Vector2 realClimbJumpForce;
         realClimbJumpForce.x = climbJumpForce.x * transform.localScale.x;
         realClimbJumpForce.y = climbJumpForce.y;
-        rigidbody.AddForce(realClimbJumpForce, ForceMode2D.Impulse);
+        playerRigidbody.AddForce(realClimbJumpForce, ForceMode2D.Impulse);
 
         //animator.SetTrigger("IsClimbJump");
         //animator.SetTrigger("IsJumpFirst");
@@ -337,10 +337,10 @@ public class PlayerController : MonoBehaviour
     private void fall()
     {
         Vector2 newVelocity;
-        newVelocity.x = rigidbody.velocity.x;
+        newVelocity.x = playerRigidbody.velocity.x;
         newVelocity.y = -fallSpeed;
 
-        rigidbody.velocity = newVelocity;
+        playerRigidbody.velocity = newVelocity;
     }
 
     // 스프린트 메서드
@@ -355,7 +355,7 @@ public class PlayerController : MonoBehaviour
         newVelocity.x = transform.localScale.x * (isClimb ? sprintSpeed : -sprintSpeed);
         newVelocity.y = 0;
 
-        rigidbody.velocity = newVelocity;
+        playerRigidbody.velocity = newVelocity;
 
         if (isClimb)
         {
