@@ -527,14 +527,14 @@ public class PlayerController : MonoBehaviour
     // 공격 코루틴
     private IEnumerator attackCoroutine(GameObject attackEffect, float effectDelay, float attackInterval, Vector2 detectDirection, Vector2 attackRecoil)
     {
-        Vector2 origin = playerTransform.position;
+        //Vector2 origin = playerTransform.position;
 
-        float radius = 0.6f;
+        //float radius = 0.6f;
 
-        float distance = 1.5f;
-        LayerMask layerMask = LayerMask.GetMask("Enemy") | LayerMask.GetMask("Trap") | LayerMask.GetMask("Switch") | LayerMask.GetMask("Projectile");
+        //float distance = 1.5f;
+        //LayerMask layerMask = LayerMask.GetMask("Enemy") | LayerMask.GetMask("Trap") | LayerMask.GetMask("Projectile");
 
-        RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);
+        //RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);
 
         //foreach (RaycastHit2D hitRec in hitRecList)
         //{
@@ -560,10 +560,10 @@ public class PlayerController : MonoBehaviour
         //    }
         //}
 
-        if (hitRecList.Length > 0)
-        {
-            playerRigidbody.velocity = attackRecoil;
-        }
+        //if (hitRecList.Length > 0)
+        //{
+        //    playerRigidbody.velocity = attackRecoil;
+        //}
 
         yield return new WaitForSeconds(effectDelay);
 
@@ -574,4 +574,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(attackInterval);
         isAttackable = true;
     }
+
+
 }

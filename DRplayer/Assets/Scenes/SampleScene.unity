@@ -324,7 +324,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 573073905}
-  - component: {fileID: 573073906}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -347,22 +346,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &573073906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573073904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a327e24bbddd8f41b551e407185bf60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageable: 1
-  healthAmount: 100
-  invulnerabilityTime: 0.2
-  giveUpwardForce: 1
 --- !u!1 &607678323
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public int health;
-    public float detectDistance;
+    //public float detectDistance;
     //public int damageToPlayer;
 
     //public Vector2 hurtRecoil;
