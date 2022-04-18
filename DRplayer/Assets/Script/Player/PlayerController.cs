@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -49,6 +48,8 @@ public class PlayerController : MonoBehaviour
     private bool isFalling;
     // 공격가능?
     private bool isAttackable;
+    // 죽었는가
+    private bool isDead;
 
     // 벽점프 딜레이.
     private float climbJumpDelay = 0.2f;
@@ -60,6 +61,8 @@ public class PlayerController : MonoBehaviour
     private Transform playerTransform;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
+    private Health heaLth;
+    private Enemy enemy;
 
     private void Start()
     {
@@ -70,11 +73,12 @@ public class PlayerController : MonoBehaviour
         // 공격 가능하게 초기화.
         isAttackable = true;
 
-        animator = gameObject.GetComponent<Animator>();
-        playerRigidbody = gameObject.GetComponent<Rigidbody2D>();
-        playerTransform = gameObject.GetComponent<Transform>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        boxCollider = gameObject.GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
+        playerRigidbody = GetComponent<Rigidbody2D>();
+        playerTransform = GetComponent<Transform>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        enemy = GetComponent<Enemy>();
     }
 
     private void Update()
@@ -188,7 +192,7 @@ public class PlayerController : MonoBehaviour
         else if (isClimb)
         {
             // 점프 1번 가능.
-            jumpCount = 1;            
+            jumpCount = 1;
         }
     }
 
@@ -305,7 +309,7 @@ public class PlayerController : MonoBehaviour
     {
         // 만약 X버튼을 누르고 있고 대쉬가 가능하며 대쉬의 쿨타임이 초기화 되었다면.
         if (Input.GetKeyDown(KeyCode.X) && isSprintable && isSprintReset)
-        { 
+        {
             // 대쉬 메서드 실행.
             sprint();
         }
@@ -316,7 +320,7 @@ public class PlayerController : MonoBehaviour
     {
         // 만약 Z버튼을 누르고 있고 벽에 닿지 않았으며 공격이 가능한 상태라면.
         if (Input.GetKeyDown(KeyCode.Z) && !isClimb && isAttackable)
-        { 
+        {
             // 공격 메서드 실행.
             attack();
         }
@@ -369,7 +373,7 @@ public class PlayerController : MonoBehaviour
         // 점프 시 점프횟수 -1.
         jumpCount -= 1;
         Debug.Log("점프");
-        
+
         // 만약 남은 점프 횟수가 0이라면.
         if (jumpCount == 0)
         {
@@ -527,43 +531,34 @@ public class PlayerController : MonoBehaviour
     // 공격 코루틴
     private IEnumerator attackCoroutine(GameObject attackEffect, float effectDelay, float attackInterval, Vector2 detectDirection, Vector2 attackRecoil)
     {
-        //Vector2 origin = playerTransform.position;
+        Vector2 origin = playerTransform.position;
 
-        //float radius = 0.6f;
+        float radius = 3f;
 
-        //float distance = 1.5f;
-        //LayerMask layerMask = LayerMask.GetMask("Enemy") | LayerMask.GetMask("Trap") | LayerMask.GetMask("Projectile");
+        float distance = 1.5f;
+        LayerMask layerMask = LayerMask.GetMask("Enemy");
+        Debug.DrawRay(origin, detectDirection, Color.red, 1f);
+        RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);
 
-        //RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);
+        foreach (RaycastHit2D hitRec in hitRecList)
+        {
+            GameObject obj = hitRec.collider.gameObject;
 
-        //foreach (RaycastHit2D hitRec in hitRecList)
-        //{
-        //    GameObject obj = hitRec.collider.gameObject;
+            string layerName = LayerMask.LayerToName(obj.layer);
 
-        //    string layerName = LayerMask.LayerToName(obj.layer);
+            if (layerName == "Enemy")
+            {
+                Enemy enemy = obj.GetComponent<Enemy>();
+                if (enemy != null)
+                    enemy.HitDamage(1);
 
-        //    //if (layerName == "Switch")
-        //    //{
-        //    //    Switch swithComponent = obj.GetComponent<Switch>();
-        //    //    if (swithComponent != null)
-        //    //        swithComponent.turnOn();
-        //    //}
-        //    if (layerName == "Enemy")
-        //    {
-        //        EnemyController enemyController = obj.GetComponent<EnemyController>();
-        //        if (enemyController != null)
-        //            enemyController.hurt(1);
-        //    }
-        //    else if (layerName == "Projectile")
-        //    {
-        //        Destroy(obj);
-        //    }
-        //}
+            }
+        }
 
-        //if (hitRecList.Length > 0)
-        //{
-        //    playerRigidbody.velocity = attackRecoil;
-        //}
+        if (hitRecList.Length > 0)
+        {
+            playerRigidbody.velocity = attackRecoil;
+        }
 
         yield return new WaitForSeconds(effectDelay);
 
@@ -575,5 +570,26 @@ public class PlayerController : MonoBehaviour
         isAttackable = true;
     }
 
+    // 적에게 피격시 
+    public void DamageHit(float enemyDamage)
+    {
+        // 체력 -damage만큼 감소
+        heaLth.health -= enemy.enemyDamage;
+        animator.SetTrigger("IsHurt");
 
+        // 체력 0 이하 플레이어 사망
+        if (heaLth.health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        animator.SetTrigger("IsDead");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        isDead = false;
+    }
 }
+    

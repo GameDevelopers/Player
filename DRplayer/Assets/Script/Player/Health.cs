@@ -17,12 +17,23 @@ public class Health : MonoBehaviour
     // 빈 체력 스프라이트
     public Sprite heartEmpty;
 
+    private Enemy enemy;
+    private PlayerController playerController;
+    private Animator animator;
+
+    private void Start()
+    {
+        enemy = GetComponent<Enemy>();
+        playerController = GetComponent<PlayerController>();
+        animator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
-       // 현재 플레이어가 가지고 있는 하트 수보다 작은지 확인
-       for (int i = 0; i < hearts.Length; i++)
+        // 현재 플레이어가 가지고 있는 하트 수보다 작은지 확인
+        for (int i = 0; i < hearts.Length; i++)
         {
-            if ( i < health)
+            if (i < health)
             {
                 hearts[i].sprite = heartFull;
             }
@@ -41,4 +52,6 @@ public class Health : MonoBehaviour
             }
         }
     }
+
+    
 }
