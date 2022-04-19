@@ -123,3 +123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  enemyDamage: 1
+  moveDistance: 1
+  speed: 1
+  itemPrefabs:
+  - {fileID: 8735553854285789450, guid: 3a95b86e66789a04c91834cd35ed660d, type: 3}
+  - {fileID: 8867143067788575180, guid: 3f54ad631c2d2d54fb0c417afaa5d7f8, type: 3}
+  - {fileID: 8867143067788575180, guid: 3f54ad631c2d2d54fb0c417afaa5d7f8, type: 3}
+  - {fileID: 8867143067788575180, guid: 3f54ad631c2d2d54fb0c417afaa5d7f8, type: 3}

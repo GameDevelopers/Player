@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    // 체력
-    //public int health;
     // 움직이는 속도
     public float moveSpeed;
     // 점프 힘.
@@ -48,8 +45,6 @@ public class PlayerController : MonoBehaviour
     private bool isFalling;
     // 공격가능?
     private bool isAttackable;
-    // 죽었는가
-    private bool isDead;
 
     // 벽점프 딜레이.
     private float climbJumpDelay = 0.2f;
@@ -154,7 +149,6 @@ public class PlayerController : MonoBehaviour
             playerRigidbody.gravityScale = 1;
         }
     }
-
 
     // 플레이어 상태 메서드
     public void updatePlayerState()
@@ -493,7 +487,7 @@ public class PlayerController : MonoBehaviour
 
         Vector2 detectDirection;
         detectDirection.x = 0;
-        detectDirection.y = 1;
+        detectDirection.y = -1;
 
         StartCoroutine(attackCoroutine(attackUpEffect, attackEffectLifeTime, attackInterval, detectDirection, attackUpRecoil));
     }
@@ -523,7 +517,7 @@ public class PlayerController : MonoBehaviour
 
         Vector2 detectDirection;
         detectDirection.x = 0;
-        detectDirection.y = -1;
+        detectDirection.y = 1;
 
         StartCoroutine(attackCoroutine(attackDownEffect, attackEffectLifeTime, attackInterval, detectDirection, attackDownRecoil));
     }
@@ -533,9 +527,9 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 origin = playerTransform.position;
 
-        float radius = 3f;
+        float radius = 0.5f;
 
-        float distance = 1.5f;
+        float distance = -3f;
         LayerMask layerMask = LayerMask.GetMask("Enemy");
         Debug.DrawRay(origin, detectDirection, Color.red, 1f);
         RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);
@@ -568,28 +562,6 @@ public class PlayerController : MonoBehaviour
         isAttackable = false;
         yield return new WaitForSeconds(attackInterval);
         isAttackable = true;
-    }
-
-    // 적에게 피격시 
-    public void DamageHit(float enemyDamage)
-    {
-        // 체력 -damage만큼 감소
-        heaLth.health -= enemy.enemyDamage;
-        animator.SetTrigger("IsHurt");
-
-        // 체력 0 이하 플레이어 사망
-        if (heaLth.health <= 0)
-        {
-            Die();
-        }
-    }
-
-    public void Die()
-    {
-        isDead = true;
-        animator.SetTrigger("IsDead");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        isDead = false;
     }
 }
     
