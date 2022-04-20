@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    private Rigidbody2D enemyRb;
     // 적 체력
     public int hp = 3;
     // 적 공격력
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        enemyRb = GetComponent<Rigidbody2D>();
         // 왼쪽 끝 지점은 -x로 움직이는 거리만큼
         leftEdge = transform.position.x - moveDistance;
         // 오른쪽 끝 지점은 +x로 움직이는 거리만큼
@@ -75,6 +77,7 @@ public class Enemy : MonoBehaviour
     {
         hp = hp - damage;
     }
+
 
     // 플레이어와 충돌하면
     private void OnTriggerEnter2D(Collider2D collision)

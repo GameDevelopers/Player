@@ -58,6 +58,17 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Health heaLth;
     private Enemy enemy;
+    private Boss boss;
+
+
+    private AudioSource audioSource;
+    public AudioClip attakSound;
+    //public AudioClip moveSound;
+    public AudioClip jumpSound;
+    public AudioClip landingSound;
+    public AudioClip sprintSound;
+
+
 
     private void Start()
     {
@@ -74,6 +85,8 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
         enemy = GetComponent<Enemy>();
+        boss = GetComponent<Boss>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -195,7 +208,6 @@ public class PlayerController : MonoBehaviour
     {
         // 양쪽 움직임은 속도에 비례하게
         float horizonMove = Input.GetAxis("Horizontal") * moveSpeed;
-
         // 속도 설정
         Vector2 newVelocity;
         // x는 양쪽 움직임
@@ -210,7 +222,7 @@ public class PlayerController : MonoBehaviour
         {
             // 이동방향에 따라 플레이어의 스프라이트가 반전.
             float moveDirection = -playerTransform.localScale.x * horizonMove;
-
+            
             // 만약 플레이어의 이동방향이 0보다 작다면.
             if (moveDirection < 0)
             {
@@ -221,7 +233,7 @@ public class PlayerController : MonoBehaviour
                 // y, z값 노상관.
                 newScale.y = 1;
                 newScale.z = 1;
-
+                
                 // 플레이어의 크기를 위에서 설정한 것으로 초기화.
                 playerTransform.localScale = newScale;
 
@@ -237,6 +249,7 @@ public class PlayerController : MonoBehaviour
             {
                 // 달리는 애니메이션 on.
                 animator.SetBool("IsRun", true);
+                
             }
         }
 
@@ -317,7 +330,9 @@ public class PlayerController : MonoBehaviour
         {
             // 공격 메서드 실행.
             attack();
+            PlaySound("ATTACK");
         }
+       
     }
 
 
@@ -367,7 +382,7 @@ public class PlayerController : MonoBehaviour
         // 점프 시 점프횟수 -1.
         jumpCount -= 1;
         Debug.Log("점프");
-
+        PlaySound("JUMP");
         // 만약 남은 점프 횟수가 0이라면.
         if (jumpCount == 0)
         {
@@ -547,6 +562,14 @@ public class PlayerController : MonoBehaviour
                     enemy.HitDamage(1);
 
             }
+            else if (layerName == "Boss")
+            {
+                BossHP bossHP = obj.GetComponent<BossHP>();
+                if (enemy != null)
+                    bossHP.BossDamaged(1);
+
+            }
+
         }
 
         if (hitRecList.Length > 0)
@@ -563,5 +586,32 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(attackInterval);
         isAttackable = true;
     }
+
+    private void PlaySound(string action)
+    {
+        switch (action)
+        {
+            case "JUMP":
+                audioSource.clip = jumpSound;
+                break;
+            case "ATTACK":
+                audioSource.clip = attakSound;
+                break;
+            //case "MOVE":
+            //    audioSource.clip = moveSound;
+            //    break;
+            case "LANDING":
+                audioSource.clip = landingSound;
+                break;
+            case "SPRINT":
+                audioSource.clip = sprintSound;
+                break;
+            //case "DIE":
+            //    audioSource.clip = dieSound;
+            //    break;
+        }
+        audioSource.Play();
+    }
 }
-    
+
+
