@@ -54,13 +54,6 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D playerRigidbody;
     private Transform playerTransform;
-    private SpriteRenderer spriteRenderer;
-    private BoxCollider2D boxCollider;
-    private Health heaLth;
-    private Enemy enemy;
-    private Boss boss;
-
-
     private AudioSource audioSource;
     public AudioClip attakSound;
     //public AudioClip moveSound;
@@ -82,10 +75,6 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerTransform = GetComponent<Transform>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        enemy = GetComponent<Enemy>();
-        boss = GetComponent<Boss>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -545,7 +534,7 @@ public class PlayerController : MonoBehaviour
         float radius = 0.5f;
 
         float distance = -3f;
-        LayerMask layerMask = LayerMask.GetMask("Enemy");
+        LayerMask layerMask = LayerMask.GetMask("Enemy") | LayerMask.GetMask("Boss");
         Debug.DrawRay(origin, detectDirection, Color.red, 1f);
         RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);
 
@@ -564,9 +553,9 @@ public class PlayerController : MonoBehaviour
             }
             else if (layerName == "Boss")
             {
-                BossHP bossHP = obj.GetComponent<BossHP>();
-                if (enemy != null)
-                    bossHP.BossDamaged(1);
+                Boss boss = obj.GetComponent<Boss>();
+                if (boss != null)
+                    boss.BossDamaged(1);
 
             }
 

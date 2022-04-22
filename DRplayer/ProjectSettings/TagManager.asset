@@ -19,6 +19,7 @@ TagManager:
   - Player
   - PlayerInvulnerable
   - Enemy
+  - Boss
   - Platform
   - Wall
   - Trap
@@ -29,7 +30,6 @@ TagManager:
   - Hud
   - Trigger
   - Projectile
-  - Boss
   - 
   - 
   - 

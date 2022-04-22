@@ -18,9 +18,11 @@ public class BossSpawn : MonoBehaviour
     // 보스 체력 패널
     [SerializeField]
     private GameObject panelBossHP;
+    private Animator animator;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         // 보스 등장 텍스트 비활
         //BossWarningText.SetActive(false);
         // 보스 체력 패널 비활
@@ -46,6 +48,6 @@ public class BossSpawn : MonoBehaviour
         // 보스 활성
         boss.SetActive(true);
         // 보스 지정된 위치로 이동
-        boss.GetComponent<Boss>().ChangeState(BossState.MoveToAppear);
+        boss.GetComponent<Boss>().ChangeState(BossState.Appear);
     }
 }

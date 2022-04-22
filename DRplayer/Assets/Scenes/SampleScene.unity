@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 12376906}
   - component: {fileID: 12376907}
   - component: {fileID: 12376901}
+  - component: {fileID: 12376908}
   m_Layer: 21
   m_Name: Boss
   m_TagString: Boss
@@ -281,6 +282,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   moveDiretion: {x: 0, y: 1, z: 0}
+--- !u!95 &12376908
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12376900}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc93d776a3def5c4cbb1e75c968dd404, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &64359248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,7 +1117,7 @@ RectTransform:
   m_Children:
   - {fileID: 598908238}
   m_Father: {fileID: 1105202992}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1183,8 +1203,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
-  - {fileID: 1004533867}
   - {fileID: 2072383877}
+  - {fileID: 1004533867}
   m_Father: {fileID: 1482783471}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1989,7 +2009,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1105202992}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2083,6 +2103,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4103267614616978993, guid: ffe5737a11782bf40ad254581090a97d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105479035681545716, guid: ffe5737a11782bf40ad254581090a97d, type: 3}
+      propertyPath: fallSpeed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4105479035681545717, guid: ffe5737a11782bf40ad254581090a97d, type: 3}
