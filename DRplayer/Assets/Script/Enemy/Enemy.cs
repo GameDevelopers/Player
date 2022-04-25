@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private Rigidbody2D enemyRb;
+    private SpriteRenderer enemySprite;
     // 적 체력
     public int hp = 3;
     // 적 공격력
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
     private float leftEdge;
     // 오른쪽 끝 지점
     private float rightEdge;
+    private Animator enemyAnim;
 
     // 아이템 드랍 배열(지오, 회복)
     [SerializeField]
@@ -29,6 +31,8 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         enemyRb = GetComponent<Rigidbody2D>();
+        enemySprite = GetComponent<SpriteRenderer>();
+        enemyAnim = GetComponent<Animator>();
         // 왼쪽 끝 지점은 -x로 움직이는 거리만큼
         leftEdge = transform.position.x - moveDistance;
         // 오른쪽 끝 지점은 +x로 움직이는 거리만큼
@@ -37,21 +41,15 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        // 적 체력이 0보다 작거나 같다면
-        if (hp <= 0)
-        {
-            // 적 수 -1
-            EnemySpawn.instance.enemyCount--;
-            EnemySpawn.instance.isSpawn[int.Parse(transform.parent.name) - 1] = false;
-            ItemSpawn();
-            Destroy(this.gameObject);
-        }
+       
 
         // 적 좌우로 움직임.
         if (moveLeft)
         {
             if (transform.position.x > leftEdge)
             {
+                enemySprite.flipX = false;
+
                 transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
             }
             else
@@ -63,6 +61,8 @@ public class Enemy : MonoBehaviour
         {
             if (transform.position.x < rightEdge)
             {
+                enemySprite.flipX = true;
+
                 transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
             }
             else
@@ -76,6 +76,18 @@ public class Enemy : MonoBehaviour
     public void HitDamage(int damage)
     {
         hp = hp - damage;
+        // 적 체력이 0보다 작거나 같다면
+        if (hp <= 0)
+        {
+            // 적 수 -1
+            EnemySpawn.instance.enemyCount--;
+            EnemySpawn.instance.isSpawn[int.Parse(transform.parent.name) - 1] = false;
+            ItemSpawn();
+            //enemyAnim.SetTrigger("IsDead");
+            //Destroy(this.gameObject);
+
+            StartCoroutine("EnemyDie");
+        }
     }
 
 
@@ -111,6 +123,14 @@ public class Enemy : MonoBehaviour
             Instantiate(itemPrefabs[2], transform.position, Quaternion.identity);
             Instantiate(itemPrefabs[3], transform.position, Quaternion.identity);
         }
+    }
+
+    private IEnumerator EnemyDie()
+    {
+        enemyAnim.SetTrigger("IsDead");
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
     }
 
 }

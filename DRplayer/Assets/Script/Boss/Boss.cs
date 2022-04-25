@@ -136,6 +136,10 @@ public class Boss : MonoBehaviour
         isBossDie = true;
         // º¸½º ÆÄ±« ÀÌÆåÆ® »ý¼º
         //BossClearText.SetActive(true);
+
+        yield return new WaitForSeconds(1.0f);
+
+
         animator.SetTrigger("IsDead");
 
         yield return new WaitForSeconds(1.0f);

@@ -61,6 +61,10 @@ public class PlayerController : MonoBehaviour
     public AudioClip landingSound;
     public AudioClip sprintSound;
 
+    [SerializeField]
+    public GameObject jumpEffectPrefab;
+    private bool spawnEffect;
+
 
 
     private void Start()
@@ -190,6 +194,18 @@ public class PlayerController : MonoBehaviour
             // 점프 1번 가능.
             jumpCount = 1;
         }
+        if (isGround == true)
+        {
+            if (spawnEffect == true)
+            {
+                Instantiate(jumpEffectPrefab, playerTransform.position, Quaternion.identity);
+                spawnEffect = false;
+            }
+            else
+            {
+                spawnEffect = true;
+            }
+        }
     }
 
     // 플레이어 움직임 메서드
@@ -277,7 +293,7 @@ public class PlayerController : MonoBehaviour
         else if (jumpCount > 0)
         {
             // 점프 메서드 실행.
-            jump();
+            jump();        
         }
     }
 
@@ -342,7 +358,6 @@ public class PlayerController : MonoBehaviour
 
         // 거리는 1.
         float distance = 1f;
-
         // 아래쪽 감지.
         // 감지할 레이어 = Platform
         LayerMask layerMask = LayerMask.GetMask("Platform");
@@ -366,6 +381,7 @@ public class PlayerController : MonoBehaviour
         // 플레이어의 속도를 메서드 초반에 만든 벡터 값으로 초기화.
         playerRigidbody.velocity = newVelocity;
 
+        //
         // 점프 상태 애니메이션 on.
         animator.SetBool("IsJump", true);
         // 점프 시 점프횟수 -1.
