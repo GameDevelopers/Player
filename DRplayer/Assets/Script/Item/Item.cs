@@ -22,7 +22,7 @@ public class Item : MonoBehaviour
         // x¹æÇâ ·£´ý
         off = new Vector3(Random.Range(-2, 2), off.y, off.z);
         // y¹æÇâ ·£´ý
-        off = new Vector3(off.x, Random.Range(0, 1), off.z);
+        off = new Vector3(off.x, Random.Range(-0.7f, -0.5f), off.z);
     }
 
     private void Update()

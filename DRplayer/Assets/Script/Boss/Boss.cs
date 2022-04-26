@@ -7,6 +7,7 @@ public enum BossState { Appear = 0, Phase1, Phase2}
 
 public class Boss : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
     // 보스가 죽었는가
     public bool isBossDie = false;
     // 보스가 나타나는 시간
@@ -32,6 +33,8 @@ public class Boss : MonoBehaviour
     public float CurrentHP => currentHP;
     private Animator animator;
     private Animation anim;
+    [SerializeField]
+    private GameObject bossDiePrefab;
 
 
     //[SerializeField]
@@ -44,6 +47,7 @@ public class Boss : MonoBehaviour
         anim = GetComponent<Animation>();
         animator = GetComponent<Animator>();
         bossWeapon = GetComponent<BossWeapon>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         // 현재 HP를 최대 HP로
         currentHP = maxHP;
     }
@@ -56,18 +60,23 @@ public class Boss : MonoBehaviour
     // 보스가 입는 데미지
     public void BossDamaged(float damage)
     {
-        // 현재 HP를 -damage만큼
-        currentHP -= damage;
-
-        //StopCoroutine("HitAnimation");
-        //StartCoroutine("HitAnimation");
-
+        if (isBossDie) return;
+        Debug.Log(isBossDie);
         // 만약 현재 hp가 0보다 작거나 같다면
         if (currentHP <= 0)
         {
             // 체력이 0이면 보스 사망.
             StartCoroutine("BossDie");
+            isBossDie = true;
         }
+
+        // 현재 HP를 -damage만큼
+        currentHP -= damage;
+
+        StopCoroutine("HitAnimation");
+        StartCoroutine("HitAnimation");
+
+
     }
 
     public void ChangeState(BossState newState)
@@ -86,7 +95,7 @@ public class Boss : MonoBehaviour
         {
             if (transform.position.y <= bossAppear)
             {
-                movement.Move(Vector3.zero);
+                //movement.Move(Vector3.zero);
                 ChangeState(BossState.Phase1);
             }
             yield return null;
@@ -97,10 +106,10 @@ public class Boss : MonoBehaviour
     private IEnumerator Phase1()
     {
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.2f);
         animator.SetTrigger("IsAttack1");
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.3f);
         bossWeapon.StartFire(AtkType.Circle);
         while (true)
         { 
@@ -131,17 +140,25 @@ public class Boss : MonoBehaviour
         }
     }
 
+    private IEnumerator HitAnimation()
+    {
+        // 색상 변경
+        spriteRenderer.color = Color.black;
+        //0.1초 대기
+        yield return new WaitForSeconds(0.1f);
+        // 원래 색상으로
+        spriteRenderer.color = Color.white;
+    }
+
     public IEnumerator BossDie()
     {
         isBossDie = true;
         // 보스 파괴 이펙트 생성
         //BossClearText.SetActive(true);
-
-        yield return new WaitForSeconds(1.0f);
-
-
+        //Vector3 pos;
+        //pos = this.gameObject.transform.position;
         animator.SetTrigger("IsDead");
-
+        //Instantiate(bossDiePrefab, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(1.0f);
         // 보스 오브젝트 삭제
         Destroy(gameObject);
