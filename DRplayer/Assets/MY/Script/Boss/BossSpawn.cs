@@ -48,6 +48,6 @@ public class BossSpawn : MonoBehaviour
         // 보스 활성
         boss.SetActive(true);
         // 보스 지정된 위치로 이동
-        boss.GetComponent<Boss>().ChangeState(BossState.Appear);
+        //boss.GetComponent<Boss>().ChangeState(BossState.Appear);
     }
 }

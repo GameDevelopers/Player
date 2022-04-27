@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class FollowCam : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // 캠이 따라다닐 대상
+    public GameObject player;
+    // 변하는 위치값
+    private Vector3 offset;
+
     void Start()
     {
-        
+        offset = transform.position - player.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        transform.position = player.transform.position + offset;
     }
 }
