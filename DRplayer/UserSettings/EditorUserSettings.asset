@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c7d1f0504352b3c66333e243d04
-      flags: 0
-    RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c7a1e121e162d623d28393930
       flags: 0
-    RecentlyUsedScenePath-2:
+    RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
       flags: 0
-    RecentlyUsedScenePath-3:
-      value: 224247031146460b5c403f21152d5a03592410253c66333e243d04
-      flags: 0
-    RecentlyUsedScenePath-4:
-      value: 224247031146460b5c403f21152d5a0359211126201b2535232c5326ece92021
-      flags: 0
-    RecentlyUsedScenePath-5:
+    RecentlyUsedScenePath-2:
       value: 224247031146460b5c403f21152d5a035927142b352d341638271e27ebef3a76f7e93ffdfe
       flags: 0
-    RecentlyUsedScenePath-6:
-      value: 224247031146460b5c403f21152d5a03593517393f1b2535232c5326ece92021
-      flags: 0
-    RecentlyUsedScenePath-7:
+    RecentlyUsedScenePath-3:
       value: 224247031146467634413f21152d5a03592419273c2423032e2c1336acf53a31f6fe
       flags: 0
+    RecentlyUsedScenePath-4:
+      value: 224247031146460b5c403f21152d5a03593a1d243966333e243d04
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 224247031146460b5c403f21152d5a03592410253c66333e243d04
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 224247031146460b5c403f21152d5a0359211126201b2535232c5326ece92021
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 224247031146467634413f21152d5a03593517393f052720633c133af6f9
+      flags: 0
     RecentlyUsedScenePath-8:
-      value: 224247031146460b5c403f21152d5a0359230d3e230527201e2a183de7ae2136ebf32f
+      value: 224247031146460b5c403f21152d5a03593517393f1b2535232c5326ece92021
       flags: 0
     RecentlyUsedScenePath-9:
-      value: 224247031146460b5c403f21152d5a03593a1d243966333e243d04
+      value: 224247031146460b5c403f21152d5a0359230d3e230527201e2a183de7ae2136ebf32f
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

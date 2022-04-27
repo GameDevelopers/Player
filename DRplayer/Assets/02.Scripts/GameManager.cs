@@ -7,10 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public void Startgame()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene(1);
-        }
+        
+        SceneManager.LoadScene(1);
+       
     }
 
     public void HomeMenu()
