@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//public enum BossState { Appear = 0, Phase1, Phase2}
-
 public class Boss : MonoBehaviour
 {
+    [Header("Boss HP")]
     [SerializeField]
     private float maxHP = 10;    // 보스 최대 HP
     private float currentHP;    // 현재 보스의 HP
@@ -14,15 +13,22 @@ public class Boss : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float MaxHP => maxHP;    // HpView 스크립트에서 쓰기 위함.
     public float CurrentHP => currentHP;    // HpView 스크립트에서 쓰기 위함.
-    //private Animator animator;
-    //private Animation anim;
+                                            //private Animator animator;
+                                            //private Animation anim;
+    [Header("BossMove")]
     [SerializeField]private float bossMoveSpeed;
     [SerializeField]private Vector2 bossMoveDirection;
+    [Header("AttackUp&Down")]
     [SerializeField]private float attackMoveSpeed;
     [SerializeField]private Vector2 attackMoveDirection;
+    [Header("AttackPlayer")]
     [SerializeField]private float attackPlayerSpeed;
-    [SerializeField]private Transform player;
-    private Vector2 playerPosition;
+    [SerializeField]private GameObject player;
+    [SerializeField]
+    private Vector3 playerPosition;
+    [SerializeField]
+    private bool isPlayerPosition;
+    [Header("Others")]
     [SerializeField] private Transform platformCheckUp;
     [SerializeField] private Transform platformCheckDown;
     [SerializeField] private Transform platformCheckWall;
@@ -34,7 +40,9 @@ public class Boss : MonoBehaviour
     private bool goingUp = true;
     private bool facingLeft = true;
     private Rigidbody2D bossRB;
+    private Animator bossAnimation;
 
+    
     private void Awake()
     {
         // 현재 HP를 최대 HP로
@@ -43,6 +51,7 @@ public class Boss : MonoBehaviour
         bossMoveDirection.Normalize();
         attackMoveDirection.Normalize();
         bossRB = GetComponent<Rigidbody2D>();
+        bossAnimation = GetComponent<Animator>();
     }
 
     private void Update()
@@ -50,16 +59,24 @@ public class Boss : MonoBehaviour
         isTouchingUp = Physics2D.OverlapCircle(platformCheckUp.position, platformCheckRadius, platformLayer);
         isTouchingDown = Physics2D.OverlapCircle(platformCheckDown.position, platformCheckRadius, platformLayer);
         isTouchingWall = Physics2D.OverlapCircle(platformCheckWall.position, platformCheckRadius, platformLayer);
-        //BossState();
-        AttackUpNDown();
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            AttackPlayer();
-        }
-        FlipTowardPlayer();
+        AttackPlayer();
     }
 
-    private void BossState()
+    private void randomStatePick()
+    {
+        int randomState = Random.Range(0, 2);
+        if (randomState == 0)
+        {
+            // AttackUPDown 애니메이션
+            bossAnimation.SetTrigger("AttackUpDown");
+        }
+        else if (randomState == 1)
+        {
+            bossAnimation.SetTrigger("AttackPlayer");
+        }
+    }
+
+    public void BossState()
     {
         if ( isTouchingUp && goingUp )
         {
@@ -83,43 +100,62 @@ public class Boss : MonoBehaviour
         bossRB.velocity = bossMoveSpeed * bossMoveDirection;
     }
 
-    private void AttackUpNDown()
+    public void AttackUpNDown()
     {
         if (isTouchingUp && goingUp)
         {
             ChangeDirection();
+            Debug.Log("u");
         }
         else if (isTouchingDown && !goingUp)
         {
             ChangeDirection();
+            Debug.Log("d");
         }
-        if (isTouchingWall)
+        if (isTouchingWall && facingLeft)
         {
-            if (facingLeft)
-            {
-                Flip();
-            }
-            else if (!facingLeft)
-            {
-                Flip();
-            }
+            Flip();
+            Debug.Log("wl");
+        }
+        else if (!facingLeft && isTouchingWall)
+        {
+            Flip();
+            Debug.Log("wr");
         }
         bossRB.velocity = attackMoveSpeed * attackMoveDirection;
     }
 
-    private void AttackPlayer()
+    public void AttackPlayer()
     {
-        // 플레이어 좌표
-        playerPosition = player.position - transform.position;
-        // 플레이어 좌표 노말라이즈
-        playerPosition.Normalize();
-        // 위 좌표로 공격
-        bossRB.velocity = playerPosition * attackPlayerSpeed;
+        if (!isPlayerPosition)
+        {
+            //플레이어 좌표
+            playerPosition = player.transform.position + transform.position;
+            FlipTowardPlayer();
+            //플레이어 좌표 노멀라이즈
+            playerPosition.Normalize();
+            isPlayerPosition = true;
+            Debug.Log("1");
+        }
+        if (isPlayerPosition)
+        {
+            //위 좌표로 공격
+            bossRB.velocity = playerPosition * attackPlayerSpeed;
+            Debug.Log("2");
+        }
+        if (isTouchingWall || isTouchingDown)
+        {
+            isPlayerPosition = false;
+            //stun animation
+            bossRB.velocity = Vector2.zero;
+            bossAnimation.SetTrigger("Stuned");
+            Debug.Log("3");
+        }
     }
 
     private void FlipTowardPlayer()
     {
-        float playerDirection = player.position.x - transform.position.x;
+        float playerDirection = player.transform.position.x - transform.position.x;
         if (playerDirection > 0 && facingLeft)
         {
             Flip();
@@ -181,23 +217,6 @@ public class Boss : MonoBehaviour
     //    StartCoroutine(bossState.ToString());
     //}
 
-
-    //private IEnumerator Appear()
-    //{
-    //    movement.Move(Vector3.up);
-
-    //    while (true)
-    //    {
-    //        if (transform.position.y <= bossAppear)
-    //        {
-    //            //movement.Move(Vector3.zero);
-    //            ChangeState(BossState.Phase1);
-    //        }
-    //        yield return null;
-    //    }
-
-    //}
-
     //private IEnumerator Phase1()
     //{
 
@@ -208,21 +227,12 @@ public class Boss : MonoBehaviour
     //    bossWeapon.StartFire(AtkType.Circle);
     //    while (true)
     //    { 
-    //        if (CurrentHP <= MaxHP * 0.5f)
+    //        if (CurrentHP <= MaxHP * 0.6f)
     //        {
-    //            animator.SetTrigger("IsRun");
-    //            ChangeState(BossState.Phase2);
+    //            ChangeState(BossState.AttackUpNDown);
     //        }
     //        yield return null;
     //    }
-    //}
-
-    //private IEnumerator Phase2()
-    //{
-    //    //yield return new WaitForSeconds(1.0f);
-    //    animator.SetTrigger("IsAttack2");
-    //    yield return null;
-
     //}
 
     // 플레이어와 충돌하면
@@ -250,10 +260,7 @@ public class Boss : MonoBehaviour
         //isBossDie = true;
         //// 보스 파괴 이펙트 생성
         ////BossClearText.SetActive(true);
-        ////Vector3 pos;
-        ////pos = this.gameObject.transform.position;
         //animator.SetTrigger("IsDead");
-        ////Instantiate(bossDiePrefab, transform.position, Quaternion.identity);
         //yield return new WaitForSeconds(1.0f);
         //// 보스 오브젝트 삭제
         Destroy(gameObject);

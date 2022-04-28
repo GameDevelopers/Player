@@ -61,10 +61,6 @@ public class PlayerController : MonoBehaviour
     public AudioClip landingSound;
     public AudioClip sprintSound;
 
-    [SerializeField]
-    public GameObject jumpEffectPrefab;
-    private bool spawnEffect;
-
 
 
     private void Start()
@@ -194,18 +190,6 @@ public class PlayerController : MonoBehaviour
             // 점프 1번 가능.
             jumpCount = 1;
         }
-        //if (isGround == true)
-        //{
-        //    if (spawnEffect == true)
-        //    {
-        //        //Instantiate(jumpEffectPrefab, playerTransform.position, Quaternion.identity);
-        //        spawnEffect = false;
-        //    }
-        //    else
-        //    {
-        //        spawnEffect = true;
-        //    }
-        //}
     }
 
     // 플레이어 움직임 메서드

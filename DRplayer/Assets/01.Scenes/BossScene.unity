@@ -212,6 +212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7062504674144608148, guid: aab1b4531314a4f48a41a79dbbd05655, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2038405633}
     - target: {fileID: 7062504674144608149, guid: aab1b4531314a4f48a41a79dbbd05655, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2487,6 +2491,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &881831582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6803927259084553553, guid: 7d630a1979271fd438263d496f37db61, type: 3}
+  m_PrefabInstance: {fileID: 1819325222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &885550108
 GameObject:
   m_ObjectHideFlags: 0
@@ -5555,9 +5564,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1443777128}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheckUp
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5740,11 +5749,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1487950572 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6801645461457626773, guid: 7d630a1979271fd438263d496f37db61, type: 3}
-  m_PrefabInstance: {fileID: 1819325222}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1490441361
 GameObject:
   m_ObjectHideFlags: 0
@@ -7021,11 +7025,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6801645461457626773, guid: 7d630a1979271fd438263d496f37db61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8.32
       objectReference: {fileID: 0}
     - target: {fileID: 6801645461457626773, guid: 7d630a1979271fd438263d496f37db61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.26
       objectReference: {fileID: 0}
     - target: {fileID: 6801645461457626773, guid: 7d630a1979271fd438263d496f37db61, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7079,6 +7083,10 @@ PrefabInstance:
       propertyPath: currenthealthBar
       value: 
       objectReference: {fileID: 864694637}
+    - target: {fileID: 6823415955324052593, guid: 7d630a1979271fd438263d496f37db61, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d630a1979271fd438263d496f37db61, type: 3}
 --- !u!1 &1838920215
@@ -7618,9 +7626,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026696789}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheckDown
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7731,9 +7739,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2082647046}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheckWall
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8151,7 +8159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6301239533048870403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.86, y: -2.12, z: 0}
+  m_LocalPosition: {x: 7.19, y: -2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1443777128}
@@ -8246,12 +8254,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 9
   bossDamage: 1
-  bossMoveSpeed: 10
-  bossMoveDirection: {x: -1, y: 0}
-  attackMoveSpeed: 10
-  attackMoveDirection: {x: -1, y: 3}
-  attackPlayerSpeed: 10
-  player: {fileID: 1487950572}
+  bossMoveSpeed: 3
+  bossMoveDirection: {x: -1, y: 1}
+  attackMoveSpeed: 23
+  attackMoveDirection: {x: -1, y: 5}
+  attackPlayerSpeed: 25
+  player: {fileID: 881831582}
+  playerPosition: {x: 0, y: 0, z: 0}
+  isPlayerPosition: 0
   platformCheckUp: {fileID: 1443777128}
   platformCheckDown: {fileID: 2026696789}
   platformCheckWall: {fileID: 2082647046}
@@ -8279,7 +8289,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!95 &6301239533048870406
 Animator:
   serializedVersion: 3
@@ -8312,6 +8322,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.052431107, y: -0.05243063}
-  m_Size: {x: 2.5803719, y: 2.8151388}
+  m_Offset: {x: -0.078131676, y: -0.05243063}
+  m_Size: {x: 2.8414974, y: 2.8414974}
   m_Direction: 0
