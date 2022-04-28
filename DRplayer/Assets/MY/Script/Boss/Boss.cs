@@ -13,8 +13,7 @@ public class Boss : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float MaxHP => maxHP;    // HpView 스크립트에서 쓰기 위함.
     public float CurrentHP => currentHP;    // HpView 스크립트에서 쓰기 위함.
-                                            //private Animator animator;
-                                            //private Animation anim;
+                                            
     [Header("BossMove")]
     [SerializeField]private float bossMoveSpeed;
     [SerializeField]private Vector2 bossMoveDirection;
@@ -41,8 +40,13 @@ public class Boss : MonoBehaviour
     private bool facingLeft = true;
     private Rigidbody2D bossRB;
     private Animator bossAnimation;
+    // 배경음악 설정(보스피깎 시 변경)
+    [SerializeField]
+    private BossMapBGM bossBGM;
+    [SerializeField]
+    private GameObject nextScene;
 
-    
+
     private void Awake()
     {
         // 현재 HP를 최대 HP로
@@ -191,6 +195,10 @@ public class Boss : MonoBehaviour
     // 보스가 입는 데미지
     public void BossDamaged(float damage)
     {
+        if (currentHP == 5f)
+        {
+            bossBGM.ChangeBgm(BGMType.BossHpHalf);
+        }
         //if (isBossDie) return;
         //Debug.Log(isBossDie);
         // 만약 현재 hp가 0보다 작거나 같다면
@@ -200,39 +208,16 @@ public class Boss : MonoBehaviour
             BossDie();
             //isBossDie = true;
         }
-
         // 현재 HP를 -damage만큼
         currentHP -= damage;
 
         StopCoroutine("HitAnimation");
         StartCoroutine("HitAnimation");
-
-
     }
 
-    //public void ChangeState(BossState newState)
+    //public void BossHpState()
     //{
-    //    StopCoroutine(bossState.ToString());
-    //    bossState = newState;
-    //    StartCoroutine(bossState.ToString());
-    //}
-
-    //private IEnumerator Phase1()
-    //{
-
-    //    yield return new WaitForSeconds(0.2f);
-    //    animator.SetTrigger("IsAttack1");
-
-    //    yield return new WaitForSeconds(0.3f);
-    //    bossWeapon.StartFire(AtkType.Circle);
-    //    while (true)
-    //    { 
-    //        if (CurrentHP <= MaxHP * 0.6f)
-    //        {
-    //            ChangeState(BossState.AttackUpNDown);
-    //        }
-    //        yield return null;
-    //    }
+          
     //}
 
     // 플레이어와 충돌하면
@@ -255,14 +240,16 @@ public class Boss : MonoBehaviour
         spriteRenderer.color = Color.white;
     }
 
+    //private void ChangeBgm()
+    //{   
+    //    bossBGM.ChangeBgm(BGMType.BossHpHalf);
+    //}
     public void BossDie()
     {
-        //isBossDie = true;
-        //// 보스 파괴 이펙트 생성
-        ////BossClearText.SetActive(true);
         //animator.SetTrigger("IsDead");
         //yield return new WaitForSeconds(1.0f);
         //// 보스 오브젝트 삭제
         Destroy(gameObject);
+        nextScene.SetActive(true);
     }
 }
