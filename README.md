@@ -1,5 +1,5 @@
-# Player
- DarkRogue 플레이어, 적, 보스 파티클 test
+# Player(+Health), Enemy, Boss(+Health), Particle, Item
+ DarkRogue 플레이어, 적, 보스, 파티클, 아이템 dev
  
 ![image](https://user-images.githubusercontent.com/86696817/165899767-07db7e92-1230-4c3e-9dd5-45feaa03a76d.png)
 ![image](https://user-images.githubusercontent.com/86696817/165899864-477d2d21-8072-42a6-9691-885af19682bb.png)
