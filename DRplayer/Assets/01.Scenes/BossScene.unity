@@ -7064,6 +7064,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6803927259084553552, guid: 7d630a1979271fd438263d496f37db61, type: 3}
+      propertyPath: moveSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fc177ad6cd9bb8e49ac493e00ffa3dba, type: 3}
+    - target: {fileID: 6803927259084553552, guid: 7d630a1979271fd438263d496f37db61, type: 3}
       propertyPath: sprintTime
       value: 0.8
       objectReference: {fileID: 0}
@@ -8100,8 +8104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClips:
-  - {fileID: 8300000, guid: 884d6d48ba8e2434eaf5dfda536922a5, type: 3}
-  - {fileID: 8300000, guid: 3a6462675df229e46a1ac75d483be5d8, type: 3}
+  - {fileID: 8300000, guid: 8070e3a5316eb624c81d9600bbac4a90, type: 3}
+  - {fileID: 8300000, guid: c40fd6ac1dfbefa489b2ea42564d0711, type: 3}
 --- !u!82 &2135507139
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8112,7 +8116,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 884d6d48ba8e2434eaf5dfda536922a5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8070e3a5316eb624c81d9600bbac4a90, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8337,7 +8341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6372d6f098265124fa151d0eb37d1371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
+  time: 5
 --- !u!4 &6301239533048870400
 Transform:
   m_ObjectHideFlags: 0
@@ -8439,7 +8443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c278a6f3fe6ddf49bfafd71c890473f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 2
+  maxHP: 9
   bossDamage: 1
   bossMoveSpeed: 3
   bossMoveDirection: {x: -1, y: 1}

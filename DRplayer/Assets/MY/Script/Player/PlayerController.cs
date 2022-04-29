@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     private Transform playerTransform;
     private AudioSource audioSource;
     public AudioClip attakSound;
-    //public AudioClip moveSound;
+    public AudioClip moveSound;
     public AudioClip jumpSound;
     public AudioClip landingSound;
     public AudioClip sprintSound;
@@ -205,7 +205,7 @@ public class PlayerController : MonoBehaviour
         newVelocity.y = playerRigidbody.velocity.y;
         // 플레이어의 속도를 위에서 지정한 값으로 초기화.
         playerRigidbody.velocity = newVelocity;
-
+      
         // 벽에 닿아 있지 않으면.
         if (!isClimb)
         {
@@ -279,6 +279,7 @@ public class PlayerController : MonoBehaviour
             // 점프 메서드 실행.
             jump();        
         }
+        PlaySound("JUMP");
     }
 
     // 떨어지는 속도 컨트롤 구현
@@ -308,6 +309,7 @@ public class PlayerController : MonoBehaviour
         {
             // 대쉬 메서드 실행.
             sprint();
+            PlaySound("SPRINT");
         }
     }
 
@@ -370,8 +372,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsJump", true);
         // 점프 시 점프횟수 -1.
         jumpCount -= 1;
-        Debug.Log("점프");
-        PlaySound("JUMP");
         // 만약 남은 점프 횟수가 0이라면.
         if (jumpCount == 0)
         {
@@ -586,9 +586,9 @@ public class PlayerController : MonoBehaviour
             case "ATTACK":
                 audioSource.clip = attakSound;
                 break;
-            //case "MOVE":
-            //    audioSource.clip = moveSound;
-            //    break;
+            case "MOVE":
+                audioSource.clip = moveSound;
+                break;
             case "LANDING":
                 audioSource.clip = landingSound;
                 break;
