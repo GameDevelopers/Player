@@ -160,6 +160,7 @@ public class PlayerController : MonoBehaviour
         // 땅에 닿았으면 애니메이터의 IsGround 체크.
         animator.SetBool("IsGround", isGround);
 
+
         // 떨어지는 속도 = 플레이어의 y값 
         float verticalVelocity = playerRigidbody.velocity.y;
         // 떨어지는 속도의 값이 0보다 떨어지는 상태.
@@ -222,7 +223,8 @@ public class PlayerController : MonoBehaviour
                 // y, z값 노상관.
                 newScale.y = 1;
                 newScale.z = 1;
-                
+                PlaySound("MOVE");
+
                 // 플레이어의 크기를 위에서 설정한 것으로 초기화.
                 playerTransform.localScale = newScale;
 
@@ -238,7 +240,6 @@ public class PlayerController : MonoBehaviour
             {
                 // 달리는 애니메이션 on.
                 animator.SetBool("IsRun", true);
-                
             }
         }
 
@@ -260,7 +261,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // 점프 (space)
+    // 점프 (X)
     private void jumpControl()
     {
         // 만약 키보드의 C버튼을 누르고 있지 않으면 실행 x.

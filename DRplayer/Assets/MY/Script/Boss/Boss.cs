@@ -45,6 +45,10 @@ public class Boss : MonoBehaviour
     private BossMapBGM bossBGM;
     [SerializeField]
     private GameObject nextScene;
+    [SerializeField]
+    private GameObject dieParticle;
+    [SerializeField]
+    private CameraShake Camera;
 
 
     private void Awake()
@@ -56,6 +60,7 @@ public class Boss : MonoBehaviour
         attackMoveDirection.Normalize();
         bossRB = GetComponent<Rigidbody2D>();
         bossAnimation = GetComponent<Animator>();
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>();
     }
 
     private void Update()
@@ -175,6 +180,7 @@ public class Boss : MonoBehaviour
         goingUp = !goingUp;
         bossMoveDirection.y *= -1;
         attackMoveDirection.y *= -1;
+        Camera.VibrateFormTime(0.05f);
     }
 
     private void Flip()
@@ -250,6 +256,7 @@ public class Boss : MonoBehaviour
         //yield return new WaitForSeconds(1.0f);
         //// 보스 오브젝트 삭제
         Destroy(gameObject);
+        dieParticle.SetActive(true);
         nextScene.SetActive(true);
     }
 }
