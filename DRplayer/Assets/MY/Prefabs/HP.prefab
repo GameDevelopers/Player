@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7139292860981514121}
   - component: {fileID: -2473698942957423627}
   - component: {fileID: -5892779996140419855}
+  - component: {fileID: 6644604639113844749}
   m_Layer: 0
   m_Name: HP
   m_TagString: Untagged
@@ -114,3 +115,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.007629028, y: 0.006103332}
   m_Size: {x: 0.2628638, y: 0.3428639}
   m_Direction: 0
+--- !u!95 &6644604639113844749
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735553854285789450}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7242ebb7dd1ae9840a3f0c2a3c424ab1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

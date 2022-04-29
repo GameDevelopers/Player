@@ -49,6 +49,7 @@ public class Boss : MonoBehaviour
     private GameObject dieParticle;
     [SerializeField]
     private CameraShake Camera;
+    private BossSound bossSound;
 
 
     private void Awake()
@@ -216,15 +217,10 @@ public class Boss : MonoBehaviour
         }
         // 현재 HP를 -damage만큼
         currentHP -= damage;
-
         StopCoroutine("HitAnimation");
         StartCoroutine("HitAnimation");
     }
 
-    //public void BossHpState()
-    //{
-          
-    //}
 
     // 플레이어와 충돌하면
     private void OnTriggerEnter2D(Collider2D collision)
@@ -246,10 +242,6 @@ public class Boss : MonoBehaviour
         spriteRenderer.color = Color.white;
     }
 
-    //private void ChangeBgm()
-    //{   
-    //    bossBGM.ChangeBgm(BGMType.BossHpHalf);
-    //}
     public void BossDie()
     {
         //animator.SetTrigger("IsDead");
