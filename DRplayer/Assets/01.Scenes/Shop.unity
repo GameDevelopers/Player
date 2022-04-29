@@ -490,6 +490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor3
       objectReference: {fileID: 0}
+    - target: {fileID: 4433732111779483305, guid: 0f5c95397c5ea7240802e9c98ba81d81, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6705719088064361708, guid: 0f5c95397c5ea7240802e9c98ba81d81, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -894,6 +898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4433732111779483305, guid: 0f5c95397c5ea7240802e9c98ba81d81, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6705719088064361708, guid: 0f5c95397c5ea7240802e9c98ba81d81, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1053,7 +1061,7 @@ GameObject:
   - component: {fileID: 1723609305}
   - component: {fileID: 1723609308}
   - component: {fileID: 1723609307}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

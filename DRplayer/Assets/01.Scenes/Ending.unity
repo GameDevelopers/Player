@@ -1019,11 +1019,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120589950878470327, guid: 8409e84e96a38c642af7a565ab4403e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.6
+      value: 118.6
       objectReference: {fileID: 0}
     - target: {fileID: 2120589950878470327, guid: 8409e84e96a38c642af7a565ab4403e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.2
+      value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 2120589950878470327, guid: 8409e84e96a38c642af7a565ab4403e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9695,13 +9695,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6027690541495501326}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
-  m_LocalPosition: {x: -2.6, y: 4.8, z: 0}
-  m_LocalScale: {x: 0.8, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9028301272795524934}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &6027690541495501324
 ParticleSystem:
   m_ObjectHideFlags: 0
