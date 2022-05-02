@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Wall
   - Boss
+  - Platform
+  - NPC
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -30,7 +33,7 @@ TagManager:
   - Hud
   - Trigger
   - Projectile
-  - 
+  - Door
   - 
   - 
   - 
@@ -43,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 94003793
     locked: 0

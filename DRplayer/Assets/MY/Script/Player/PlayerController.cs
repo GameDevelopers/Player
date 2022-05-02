@@ -535,7 +535,7 @@ public class PlayerController : MonoBehaviour
         float radius = 0.5f;
 
         float distance = -3f;
-        LayerMask layerMask = LayerMask.GetMask("Enemy") | LayerMask.GetMask("Boss");
+        LayerMask layerMask = LayerMask.GetMask("Enemy") | LayerMask.GetMask("Boss") | LayerMask.GetMask("Door");
         Debug.DrawRay(origin, detectDirection, Color.red, 1f);
         RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);
 
@@ -558,6 +558,11 @@ public class PlayerController : MonoBehaviour
                 if (boss != null)
                     boss.BossDamaged(1);
 
+            }
+            else if (layerName == "Door")
+            {
+                DoorCrush door = obj.GetComponent<DoorCrush>();
+                door.HitDoor(1);
             }
 
         }
