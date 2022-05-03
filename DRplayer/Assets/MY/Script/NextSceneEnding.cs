@@ -19,7 +19,7 @@ public class NextSceneEnding : MonoBehaviour
 	IEnumerator FadeIn()
 	{
 		anim.SetTrigger("FadeIn");
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1.75f);
 		SceneManager.LoadScene("Menu");
 	}
 }

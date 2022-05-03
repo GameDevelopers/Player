@@ -536,7 +536,7 @@ public class PlayerController : MonoBehaviour
 
         float distance = -3f;
         LayerMask layerMask = LayerMask.GetMask("Enemy") | LayerMask.GetMask("Boss") | LayerMask.GetMask("Door");
-        Debug.DrawRay(origin, detectDirection, Color.red, 1f);
+        //Debug.DrawRay(origin, detectDirection, Color.red, 1f);
         RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);
 
         foreach (RaycastHit2D hitRec in hitRecList)

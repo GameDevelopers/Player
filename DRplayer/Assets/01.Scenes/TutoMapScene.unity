@@ -20579,6 +20579,22 @@ PrefabInstance:
       propertyPath: currenthealthBar
       value: 
       objectReference: {fileID: 657562149}
+    - target: {fileID: 6823415955324052593, guid: 7d630a1979271fd438263d496f37db61, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4144945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823415955324052593, guid: 7d630a1979271fd438263d496f37db61, type: 3}
+      propertyPath: m_Size.y
+      value: 0.81357193
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823415955324052593, guid: 7d630a1979271fd438263d496f37db61, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0021195412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823415955324052593, guid: 7d630a1979271fd438263d496f37db61, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.23537254
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d630a1979271fd438263d496f37db61, type: 3}
 --- !u!1001 &5855419391309417698

@@ -13765,7 +13765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c278a6f3fe6ddf49bfafd71c890473f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 9
+  maxHP: 1
   bossDamage: 1
   bossMoveSpeed: 3
   bossMoveDirection: {x: -1, y: 1}
