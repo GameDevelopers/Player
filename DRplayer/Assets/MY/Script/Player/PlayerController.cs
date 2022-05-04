@@ -60,6 +60,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip landingSound;
     public AudioClip sprintSound;
+    private SpriteRenderer playerSprite;
+    private float horizonMove;
+    private bool faceRight = true;
 
 
 
@@ -76,6 +79,7 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerTransform = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -197,7 +201,7 @@ public class PlayerController : MonoBehaviour
     private void move()
     {
         // 양쪽 움직임은 속도에 비례하게
-        float horizonMove = Input.GetAxis("Horizontal") * moveSpeed;
+        horizonMove = Input.GetAxis("Horizontal") * moveSpeed;
         // 속도 설정
         Vector2 newVelocity;
         // x는 양쪽 움직임
@@ -211,22 +215,23 @@ public class PlayerController : MonoBehaviour
         if (!isClimb)
         {
             // 이동방향에 따라 플레이어의 스프라이트가 반전.
-            float moveDirection = -playerTransform.localScale.x * horizonMove;
+            float moveDirection = horizonMove;
             
             // 만약 플레이어의 이동방향이 0보다 작다면.
-            if (moveDirection < 0)
+            if (moveDirection < 0 && !faceRight)
             {
-                // 플레이어의 스프라이트가 반전.
-                Vector3 newScale;
-                // x = 움직임이 0보다 작다면 양수(오른쪽으로) 아니면 음수(왼쪽으로)
-                newScale.x = horizonMove < 0 ? 1 : -1;
-                // y, z값 노상관.
-                newScale.y = 1;
-                newScale.z = 1;
+                //// 플레이어의 스프라이트가 반전.
+                //Vector3 newScale;
+                //// x = 움직임이 0보다 작다면 양수(오른쪽으로) 아니면 음수(왼쪽으로)
+                //newScale.x = horizonMove < 0 ? 1 : -1;
+                //// y, z값 노상관.
+                //newScale.y = 1;
+                //newScale.z = 1;
+                Flip();
                 PlaySound("MOVE");
 
                 // 플레이어의 크기를 위에서 설정한 것으로 초기화.
-                playerTransform.localScale = newScale;
+                //playerTransform.localScale = newScale;
 
                 // 만약에 땅에 닿았다면.
                 if (isGround)
@@ -236,8 +241,9 @@ public class PlayerController : MonoBehaviour
                 }
             }
             // 또 만약에 이동방향이 0보다 크다면(오
-            else if (moveDirection > 0)
+            else if (moveDirection > 0 && faceRight)
             {
+                Flip();
                 // 달리는 애니메이션 on.
                 animator.SetBool("IsRun", true);
             }
@@ -259,6 +265,12 @@ public class PlayerController : MonoBehaviour
             // 멈춤상태의 애니메이션 종료.
             animator.ResetTrigger("stopTrigger");
         }
+    }
+
+    void Flip()
+    {
+        faceRight = !faceRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 
     // 점프 (X)
@@ -442,7 +454,7 @@ public class PlayerController : MonoBehaviour
         isSprintReset = false;
 
         Vector2 newVelocity;
-        newVelocity.x = playerTransform.localScale.x * (isClimb ? sprintSpeed : -sprintSpeed);
+        newVelocity.x = -horizonMove * (isClimb ? sprintSpeed : -sprintSpeed);
         newVelocity.y = 0;
 
         playerRigidbody.velocity = newVelocity;

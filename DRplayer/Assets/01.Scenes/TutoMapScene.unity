@@ -20565,7 +20565,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: fc177ad6cd9bb8e49ac493e00ffa3dba, type: 3}
     - target: {fileID: 6803927259084553552, guid: 7d630a1979271fd438263d496f37db61, type: 3}
       propertyPath: sprintTime
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6803927259084553553, guid: 7d630a1979271fd438263d496f37db61, type: 3}
       propertyPath: m_Name
