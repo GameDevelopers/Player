@@ -1,0 +1,1518 @@
+fileFormatVersion: 2
+guid: f611abfc20c6c444a94a1e3bb61a8d3b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4041140133012446507
+    second: CaveBack_0
+  - first:
+      213: -3757536427826133533
+    second: CaveBack_1
+  - first:
+      213: 8040942754154713907
+    second: CaveBack_2
+  - first:
+      213: -4844793077126817739
+    second: CaveBack_3
+  - first:
+      213: -5331203383162600767
+    second: CaveBack_4
+  - first:
+      213: 3715706020619234926
+    second: CaveBack_5
+  - first:
+      213: 2667493529695647561
+    second: CaveBack_6
+  - first:
+      213: 4274998801453135639
+    second: CaveBack_7
+  - first:
+      213: 1922256029845275782
+    second: CaveBack_8
+  - first:
+      213: 9121319055783382628
+    second: CaveBack_9
+  - first:
+      213: 2760633669936504997
+    second: CaveBack_10
+  - first:
+      213: -5430582182887291843
+    second: CaveBack_11
+  - first:
+      213: 1296461260362476515
+    second: CaveBack_12
+  - first:
+      213: -4622878005267486183
+    second: CaveBack_13
+  - first:
+      213: -2346983063346786623
+    second: CaveBack_14
+  - first:
+      213: 708675537733087500
+    second: CaveBack_15
+  - first:
+      213: -8922087001348401687
+    second: CaveBack_17
+  - first:
+      213: -3286756104655903235
+    second: CaveBack_18
+  - first:
+      213: -2301413381351475447
+    second: CaveBack_19
+  - first:
+      213: -4830753168241412524
+    second: CaveBack_20
+  - first:
+      213: 9182206961945445556
+    second: CaveBack_21
+  - first:
+      213: -774861229916079735
+    second: CaveBack_22
+  - first:
+      213: -7374761895708087892
+    second: CaveBack_24
+  - first:
+      213: 2063296709645346803
+    second: CaveBack_25
+  - first:
+      213: 2771854513904178625
+    second: CaveBack_28
+  - first:
+      213: -1514162123405490526
+    second: CaveBack_29
+  - first:
+      213: -6566549804842380140
+    second: CaveBack_30
+  - first:
+      213: -90255602751635660
+    second: CaveBack_31
+  - first:
+      213: 5062292013203131576
+    second: CaveBack_32
+  - first:
+      213: 5192967388572374488
+    second: CaveBack_33
+  - first:
+      213: 4976185687644547876
+    second: CaveBack_34
+  - first:
+      213: -3041142382876646719
+    second: CaveBack_35
+  - first:
+      213: 4555526861730897747
+    second: CaveBack_36
+  - first:
+      213: 8987890538821823768
+    second: CaveBack_37
+  - first:
+      213: -3355847521801663919
+    second: CaveBack_38
+  - first:
+      213: 428470960167503165
+    second: CaveBack_39
+  - first:
+      213: 131162207435621724
+    second: CaveBack_40
+  - first:
+      213: -7862832134245568331
+    second: CaveBack_41
+  - first:
+      213: -6749731988194494377
+    second: CaveBack_42
+  - first:
+      213: -3938324589853369064
+    second: CaveBack_43
+  - first:
+      213: 5843399677482572387
+    second: CaveBack_44
+  - first:
+      213: -6445147133900904131
+    second: CaveBack_45
+  - first:
+      213: -6807258828315436798
+    second: CaveBack_46
+  - first:
+      213: -8067891784202586884
+    second: CaveBack_47
+  - first:
+      213: -2570516774133474728
+    second: CaveBack_48
+  - first:
+      213: -1742296953510597863
+    second: CaveBack_49
+  - first:
+      213: -5777475292376703503
+    second: CaveBack_50
+  - first:
+      213: -9038742079364129778
+    second: CaveBack_51
+  - first:
+      213: 7422187767641244256
+    second: CaveBack_52
+  - first:
+      213: 3991077605367513524
+    second: CaveBack_53
+  - first:
+      213: 5376758446083342600
+    second: CaveBack_54
+  - first:
+      213: -541687077098630123
+    second: CaveBack_55
+  - first:
+      213: -7940901027024358402
+    second: CaveBack_56
+  - first:
+      213: -5045166083574287243
+    second: CaveBack_57
+  - first:
+      213: 7476038391629550980
+    second: CaveBack_58
+  - first:
+      213: 2617719695288154629
+    second: CaveBack_59
+  - first:
+      213: 221408843130586871
+    second: CaveBack_60
+  - first:
+      213: -562303345614613911
+    second: CaveBack_61
+  - first:
+      213: -1645021622209218090
+    second: CaveBack_16
+  - first:
+      213: 2232550620084114637
+    second: CaveBack_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CaveBack_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1702
+        width: 66
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d18c34a83051830800000000000000
+      internalID: 4041140133012446507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_1
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1734
+        width: 117
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e545d4f68c8adbc0800000000000000
+      internalID: -3757536427826133533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_2
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1419
+        width: 314
+        height: 629
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33394a805da279f60800000000000000
+      internalID: 8040942754154713907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1548
+        width: 216
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538959b7d56d3ccb0800000000000000
+      internalID: -4844793077126817739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_4
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1801
+        width: 68
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c28b39d4c2c306b0800000000000000
+      internalID: -5331203383162600767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_5
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 1763
+        width: 187
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e2ac860f6d09330800000000000000
+      internalID: 3715706020619234926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_6
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1741
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94779267b37d40520800000000000000
+      internalID: 2667493529695647561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1703
+        width: 129
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717b5df82c8d35b30800000000000000
+      internalID: 4274998801453135639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_8
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1291
+        width: 217
+        height: 444
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684c742bca93daa10800000000000000
+      internalID: 1922256029845275782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_9
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1341
+        width: 252
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e48faba5f659e70800000000000000
+      internalID: 9121319055783382628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1552
+        width: 219
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a06c8342bdbf4620800000000000000
+      internalID: 2760633669936504997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_11
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1315
+        width: 284
+        height: 297
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d340071f642b2a4b0800000000000000
+      internalID: -5430582182887291843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_12
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1297
+        width: 89
+        height: 277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebe5f8b5a4fdf110800000000000000
+      internalID: 1296461260362476515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_13
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 1563
+        width: 103
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91aa01082fc38dfb0800000000000000
+      internalID: -4622878005267486183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1316
+        width: 286
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce4b57b657dd6fd0800000000000000
+      internalID: -2346983063346786623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_15
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 1203
+        width: 97
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01f69795a8b5d900800000000000000
+      internalID: 708675537733087500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_17
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 1274
+        width: 111
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e59f7db4216e2480800000000000000
+      internalID: -8922087001348401687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_18
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1316
+        width: 273
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df563ae9cb81362d0800000000000000
+      internalID: -3286756104655903235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_19
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1193
+        width: 152
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907f63b19bcbf00e0800000000000000
+      internalID: -2301413381351475447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_20
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1188
+        width: 118
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456b0618697b5fcb0800000000000000
+      internalID: -4830753168241412524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_21
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1174
+        width: 136
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b480ec1590cd6f70800000000000000
+      internalID: 9182206961945445556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_22
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 1217
+        width: 63
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98931a811d32f35f0800000000000000
+      internalID: -774861229916079735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_24
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1207
+        width: 58
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9ab37012597a990800000000000000
+      internalID: -7374761895708087892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_25
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1106
+        width: 54
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7a4a4fc6d42ac10800000000000000
+      internalID: 2063296709645346803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_28
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 944
+        width: 147
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c552569efa977620800000000000000
+      internalID: 2771854513904178625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 986
+        width: 486
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a68016329d9cfae0800000000000000
+      internalID: -1514162123405490526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_30
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1035
+        width: 91
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494957a5ebdeed4a0800000000000000
+      internalID: -6566549804842380140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_31
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 945
+        width: 234
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ffffae1095fbef0800000000000000
+      internalID: -90255602751635660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_32
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 888
+        width: 237
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc054cc3cfd04640800000000000000
+      internalID: 5062292013203131576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_34
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 867
+        width: 60
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42baf689486fe0540800000000000000
+      internalID: 4976185687644547876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_35
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 859
+        width: 204
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2a04d8d11bbc5d0800000000000000
+      internalID: -3041142382876646719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_36
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 896
+        width: 95
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f58366b8b783f30800000000000000
+      internalID: 4555526861730897747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_37
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 723
+        width: 728
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81da19e33d66bbc70800000000000000
+      internalID: 8987890538821823768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_38
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 737
+        width: 106
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a03ae7572ad61d0800000000000000
+      internalID: -3355847521801663919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_39
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 718
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35ca51711c32f500800000000000000
+      internalID: 428470960167503165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_40
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 708
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55082e255bf1d100800000000000000
+      internalID: 131162207435621724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_41
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 730
+        width: 54
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b034cd35db91e290800000000000000
+      internalID: -7862832134245568331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_42
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 655
+        width: 487
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7587392b4822452a0800000000000000
+      internalID: -6749731988194494377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_43
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 724
+        width: 117
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d9a93d6a24859c0800000000000000
+      internalID: -3938324589853369064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_44
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 680
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a1bf80c0de71150800000000000000
+      internalID: 5843399677482572387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_45
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 527
+        width: 54
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39a5be54dc3e86a0800000000000000
+      internalID: -6445147133900904131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_46
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 580
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209dd1c7922c781a0800000000000000
+      internalID: -6807258828315436798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_47
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 515
+        width: 704
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4ff44fa27190090800000000000000
+      internalID: -8067891784202586884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_48
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 607
+        width: 53
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a5794fc90b35cd0800000000000000
+      internalID: -2570516774133474728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_49
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 548
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b61c0e62e12d7e0800000000000000
+      internalID: -1742296953510597863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_50
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 550
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd5a4bf4d842dfa0800000000000000
+      internalID: -5777475292376703503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_51
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 282
+        width: 596
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c1027d7ffef8280800000000000000
+      internalID: -9038742079364129778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_52
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 348
+        width: 103
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06281824378e00760800000000000000
+      internalID: 7422187767641244256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_53
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 319
+        width: 659
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b182fabfe7236730800000000000000
+      internalID: 3991077605367513524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_54
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 265
+        width: 228
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80101e5c1551e9a40800000000000000
+      internalID: 5376758446083342600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_55
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 401
+        width: 193
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514dd1e297a8b78f0800000000000000
+      internalID: -541687077098630123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_56
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 397
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3bdafa6904cc190800000000000000
+      internalID: -7940901027024358402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_58
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 4
+        width: 348
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4851344be4930c760800000000000000
+      internalID: 7476038391629550980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_59
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 10
+        width: 573
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ab13f8132045420800000000000000
+      internalID: 2617719695288154629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_60
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 163
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6cde47b2a921300800000000000000
+      internalID: 221408843130586871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_61
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 4
+        width: 91
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96290ac161c4238f0800000000000000
+      internalID: -562303345614613911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_16
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1175
+        width: 287
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9f160ec85bb29e0800000000000000
+      internalID: -1645021622209218090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack_23
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 942
+        width: 218
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4113dd5fc9bfe10800000000000000
+      internalID: 2232550620084114637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

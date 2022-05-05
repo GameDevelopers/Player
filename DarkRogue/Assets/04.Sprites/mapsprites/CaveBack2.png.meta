@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 6ddc7eb62c029314d89f16f476258847
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7668847865187975269
+    second: CaveBack2_0
+  - first:
+      213: -7669712766944720120
+    second: CaveBack2_1
+  - first:
+      213: -2409405598008168645
+    second: CaveBack2_2
+  - first:
+      213: 754759355135761727
+    second: CaveBack2_3
+  - first:
+      213: 9016967914775850042
+    second: CaveBack2_4
+  - first:
+      213: -4899242017342655879
+    second: CaveBack2_5
+  - first:
+      213: 9060024355754315670
+    second: CaveBack2_6
+  - first:
+      213: 2930852217945756972
+    second: CaveBack2_7
+  - first:
+      213: 1702632365775636142
+    second: CaveBack2_9
+  - first:
+      213: 7760964244212650670
+    second: CaveBack2_10
+  - first:
+      213: -3548636342973158735
+    second: CaveBack2_12
+  - first:
+      213: 8412639731389764897
+    second: CaveBack2_13
+  - first:
+      213: 6318336402804755076
+    second: CaveBack2_17
+  - first:
+      213: 4110096156274559062
+    second: CaveBack2_19
+  - first:
+      213: -4447277340097435342
+    second: CaveBack2_20
+  - first:
+      213: -7797413137100167316
+    second: CaveBack2_21
+  - first:
+      213: -2589518684795650423
+    second: CaveBack2_22
+  - first:
+      213: -5682702253035061904
+    second: CaveBack2_23
+  - first:
+      213: -6720795595845904458
+    second: CaveBack2_24
+  - first:
+      213: 2418439476679127336
+    second: CaveBack2_25
+  - first:
+      213: 2524603924911752718
+    second: CaveBack2_26
+  - first:
+      213: -4251378513203504069
+    second: CaveBack2_27
+  - first:
+      213: 3968232328030076082
+    second: CaveBack2_28
+  - first:
+      213: -9190292074328216809
+    second: CaveBack2_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CaveBack2_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1515
+        width: 538
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f35f67f77c29590800000000000000
+      internalID: -7668847865187975269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_1
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 856
+        width: 497
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b4bf4dfd4bf8590800000000000000
+      internalID: -7669712766944720120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1287
+        width: 365
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fa2eacf52109ed0800000000000000
+      internalID: -2409405598008168645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_3
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1222
+        width: 229
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d15c572a1797a00800000000000000
+      internalID: 754759355135761727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1087
+        width: 178
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c2f476b84b22d70800000000000000
+      internalID: 9016967914775850042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1023
+        width: 290
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9727f9fa755620cb0800000000000000
+      internalID: -4899242017342655879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_6
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1023
+        width: 257
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f8f15462cabbd70800000000000000
+      internalID: 9060024355754315670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_7
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1024
+        width: 230
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2592db509a7ca820800000000000000
+      internalID: 2930852217945756972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_9
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 840
+        width: 146
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6c321ad17f0a710800000000000000
+      internalID: 1702632365775636142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_10
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 880
+        width: 116
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea29dca5cdb74bb60800000000000000
+      internalID: 7760964244212650670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_12
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 808
+        width: 184
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba2b0c2c06b0cec0800000000000000
+      internalID: -3548636342973158735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_13
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 585
+        width: 372
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12513dc7343bfb470800000000000000
+      internalID: 8412639731389764897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_17
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 441
+        width: 456
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ac89c7b7d3fa750800000000000000
+      internalID: 6318336402804755076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_19
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 392
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658817b8daef90930800000000000000
+      internalID: 4110096156274559062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_20
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 359
+        width: 465
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23929d562d81842c0800000000000000
+      internalID: -4447277340097435342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_21
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 343
+        width: 182
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c672e2470160ac390800000000000000
+      internalID: -7797413137100167316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_22
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1
+        width: 496
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98eb48dd97e201cd0800000000000000
+      internalID: -2589518684795650423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_23
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 186
+        width: 190
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d788bb86cf221b0800000000000000
+      internalID: -5682702253035061904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_24
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 0
+        width: 321
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7589d8300fab2a0800000000000000
+      internalID: -6720795595845904458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_25
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 144
+        width: 181
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821bd3ef3e5009120800000000000000
+      internalID: 2418439476679127336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_26
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 204
+        width: 236
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e060ceec4e1390320800000000000000
+      internalID: 2524603924911752718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_27
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 0
+        width: 189
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cd6ca54c11005c0800000000000000
+      internalID: -4251378513203504069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_28
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 0
+        width: 256
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc347a174ef11730800000000000000
+      internalID: 3968232328030076082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBack2_8
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 405
+        width: 229
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b2497fc06857080800000000000000
+      internalID: -9190292074328216809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
