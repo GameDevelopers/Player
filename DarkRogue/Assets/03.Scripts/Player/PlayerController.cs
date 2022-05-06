@@ -65,9 +65,6 @@ public class PlayerController : MonoBehaviour
     private float horizonMove;
     private bool faceRight = true;
 
-    private float wallJumpCooldown;
-
-    private BoxCollider2D boxCol;
     [SerializeField] private LayerMask wallLayer;
 
     private void Start()
@@ -83,7 +80,6 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerTransform = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
-        boxCol = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -394,63 +390,85 @@ public class PlayerController : MonoBehaviour
             // 1단점프 애니메이션 on.
             animator.SetTrigger("IsJumpFirst");
         }
+       
     }
 
-    // 벽점프 메서드
-    //private void climbJump()
-    //{
-    //    // 벽점프 힘 벡터 생성.
-    //    Vector2 realClimbJumpForce;
-    //    // x좌표는 벽점프 힘
-    //    realClimbJumpForce.x = climbJumpForce.x * playerTransform.localScale.x * 0.5f;
-    //    realClimbJumpForce.y = climbJumpForce.y;
-    //    playerRigidbody.AddForce(realClimbJumpForce, ForceMode2D.Impulse);
-
-    //    animator.SetTrigger("IsClimbJump");
-    //    animator.SetTrigger("IsJumpFirst");
-    //    Debug.Log("벽점");
-
-    //    isInputEnabled = false;
-
-    //    StartCoroutine(climbJumpCoroutine(climbJumpDelay));
-    //}
-
-    //private IEnumerator climbJumpCoroutine(float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
-
-    //    isInputEnabled = true;
-
-    //    animator.ResetTrigger("IsClimbJump");
-
-    //    // jump to the opposite direction
-    //    Vector3 newScale;
-    //    newScale.x = -playerTransform.localScale.x;
-    //    newScale.y = 1;
-    //    newScale.z = 1;
-
-    //    //playerTransform.localScale = newScale;
-    //}
-
-    private bool onWall()
-    {
-        RaycastHit2D wallHit = Physics2D.BoxCast(boxCol.bounds.center, boxCol.bounds.size, 0, new Vector2(playerTransform.localScale.x, 0), 0.15f, wallLayer);
-        return wallHit.collider != null;
-    }
-
+    //벽점프 메서드
     private void climbJump()
     {
-        if (wallJumpCooldown < 0.2f)
-        {
-            if ( onWall() && !isGround )
-            {
-                playerRigidbody.gravityScale = 0;
-                playerRigidbody.velocity = Vector2.zero;
-            }
-        }
+        // 벽점프 힘 벡터 생성.
+        Vector2 realClimbJumpForce;
+        // x좌표는 벽점프 힘
+        realClimbJumpForce.x = climbJumpForce.x * playerTransform.localScale.x * 0.5f;
+        realClimbJumpForce.y = climbJumpForce.y;
+        playerRigidbody.AddForce(realClimbJumpForce, ForceMode2D.Impulse);
+
+        animator.SetTrigger("IsClimbJump");
+        animator.SetTrigger("IsJumpFirst");
+        Debug.Log("벽점");
+
+        isInputEnabled = false;
+
+        StartCoroutine(climbJumpCoroutine(climbJumpDelay));
     }
 
-    
+    private IEnumerator climbJumpCoroutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        isInputEnabled = true;
+
+        animator.ResetTrigger("IsClimbJump");
+
+        // jump to the opposite direction
+        Vector3 newScale;
+        newScale.x = -playerTransform.localScale.x;
+        newScale.y = 1;
+        newScale.z = 1;
+
+        playerTransform.localScale = newScale;
+    }
+
+    //private bool onWall()
+    //{
+    //    RaycastHit2D wallHit = Physics2D.BoxCast(boxCol.bounds.center, boxCol.bounds.size, 0, new Vector2(playerTransform.localScale.x, 0), 0.15f, wallLayer);
+    //    return wallHit.collider != null;
+    //}
+
+    //private void climbJump()
+    //{
+    //    if (wallJumpCooldown > 0.2f)
+    //    {
+    //        playerRigidbody.velocity = new Vector2(horizonMove * moveSpeed, playerRigidbody.velocity.y);
+
+    //        if (onWall() && !isGround)
+    //        {
+    //            playerRigidbody.gravityScale = 0;
+    //            playerRigidbody.velocity = Vector2.zero;
+    //        }
+    //        else
+    //            playerRigidbody.gravityScale = 1;
+
+    //        if (Input.GetKey(KeyCode.C))
+    //            jump();
+    //    }
+    //    else if (onWall() && !isGround)
+    //    {
+    //        if (horizonMove == 0)
+    //        {
+    //            playerRigidbody.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
+    //            transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+    //        }
+    //        else
+    //            playerRigidbody.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3, 6);
+
+    //        wallJumpCooldown = 0;
+    //    }
+    //    else
+    //        wallJumpCooldown += Time.deltaTime;
+    //}
+
+
 
     // 떨어지는 거 구현 메서드
     private void fall()

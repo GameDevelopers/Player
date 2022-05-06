@@ -17,9 +17,11 @@ public class Boss : MonoBehaviour
     [Header("BossMove")]
     [SerializeField] private float bossMoveSpeed;
     [SerializeField] private Vector2 bossMoveDirection;
+
     [Header("AttackUp&Down")]
     [SerializeField] private float attackMoveSpeed;
     [SerializeField] private Vector2 attackMoveDirection;
+
     [Header("AttackPlayer")]
     [SerializeField] private float attackPlayerSpeed;
     [SerializeField] private GameObject player;
@@ -27,6 +29,7 @@ public class Boss : MonoBehaviour
     private Vector3 playerPosition;
     [SerializeField]
     private bool isPlayerPosition;
+
     [Header("Others")]
     [SerializeField] private Transform platformCheckUp;
     [SerializeField] private Transform platformCheckDown;

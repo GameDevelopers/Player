@@ -616,14 +616,12 @@ MonoBehaviour:
   attackForwardEffect: {fileID: 2326591966506263504}
   attackDownEffect: {fileID: 2326762321773975174}
   isGround: 0
+  isClimbable: 0
   attakSound: {fileID: 8300000, guid: 38c79067ebec2b54bbcab19811b2d6f9, type: 3}
   moveSound: {fileID: 8300000, guid: cead2a5c2f9e07348bdf857f8f30cab4, type: 3}
   jumpSound: {fileID: 8300000, guid: 716b0373e11da004fbb923b07f21e8e8, type: 3}
   landingSound: {fileID: 8300000, guid: f4ac2ddbb870e5c44bd9100178a32d88, type: 3}
   sprintSound: {fileID: 8300000, guid: 1b8db47388ed1cf47b87ec52dc4e802a, type: 3}
-  wallCheck: {fileID: 191333013}
-  wallCheckDistance: 0.2
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
-  slidingSpeed: 0

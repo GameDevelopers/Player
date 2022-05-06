@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1572388541491878862}
   - component: {fileID: 1572388541491878863}
   - component: {fileID: 1572388541491878860}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1491255115
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: -5344194518197110270, guid: a770137e68de0f743a30a2df003b47e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,10 +133,10 @@ MonoBehaviour:
   platformCheckRadius: 0.2
   platformLayer:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 512
   bossBGM: {fileID: 0}
-  nextScene: {fileID: 0}
-  dieParticle: {fileID: 0}
+  nextScene: {fileID: 1970217355596583462, guid: a3ef1da393bcd4b4eb47cf9755f7179f, type: 3}
+  dieParticle: {fileID: 9084795121455385927, guid: 76b603fd61b24a84f9da1b75e103a191, type: 3}
   Camera: {fileID: 0}
 --- !u!50 &1572388541491878863
 Rigidbody2D:
@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800908619503665612}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: GroundCheckWall
   m_TagString: Boss
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800908619565424031}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: GroundCheckDown
   m_TagString: Boss
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800908620206991266}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: GroundCheckUp
   m_TagString: Boss
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
