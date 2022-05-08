@@ -551,11 +551,11 @@ public class PlayerController : MonoBehaviour
         attackForwardEffect.SetActive(true);
 
         Vector2 detectDirection;
-        detectDirection.x = playerTransform.localScale.x;
+        detectDirection.x = horizonMove;/*playerTransform.localScale.x;*/
         detectDirection.y = 0;
 
         Vector2 recoil;
-        recoil.x = playerTransform.localScale.x > 0 ? -attackForwardRecoil.x : attackForwardRecoil.x;
+        recoil.x = horizonMove > 0 ? -attackForwardRecoil.x : attackForwardRecoil.x;
         recoil.y = attackForwardRecoil.y;
 
         StartCoroutine(attackCoroutine(attackForwardEffect, attackEffectLifeTime, attackInterval, detectDirection, recoil));
@@ -581,7 +581,7 @@ public class PlayerController : MonoBehaviour
 
         float radius = 0.5f;
 
-        float distance = -3f;
+        float distance = 1.5f;
         LayerMask layerMask = LayerMask.GetMask("Enemy") | LayerMask.GetMask("Boss") | LayerMask.GetMask("Door"); ;
         Debug.DrawRay(origin, detectDirection, Color.red, 1f);
         RaycastHit2D[] hitRecList = Physics2D.CircleCastAll(origin, radius, detectDirection, distance, layerMask);

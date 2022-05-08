@@ -15,7 +15,7 @@ public class CameraShake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initialPos = new Vector3(0f, 0f, -5f);
+        initialPos = new Vector3(8f, 1f, -5f);
     }
 
     // Update is called once per frame
