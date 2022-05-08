@@ -205,7 +205,7 @@ public class Boss : MonoBehaviour
     // 보스가 입는 데미지
     public void BossDamaged(float damage)
     {
-        if (currentHP == 5f)
+        if (currentHP == 2f)
         {
             bossBGM.ChangeBgm(BGMType.BossHpHalf);
         }
